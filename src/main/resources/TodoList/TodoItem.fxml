@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="60.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="14.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clean Room" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <CheckBox layoutX="662.0" layoutY="21.0" mnemonicParsing="false" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="21.0" />
+      <Line endX="510.0" layoutX="133.0" layoutY="30.0" startX="-100.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="60.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="147.0" layoutY="62.0" prefHeight="338.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
+      <TextField layoutX="47.0" layoutY="33.0" promptText="What to do?" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <DatePicker editable="false" layoutX="203.0" layoutY="20.0" promptText="Due Date" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="20.0" />
+      <HBox layoutX="412.0" layoutY="20.0" spacing="10.0" AnchorPane.leftAnchor="412.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Button layoutX="412.0" layoutY="20.0" mnemonicParsing="false" text="!" />
+            <Button layoutX="435.0" layoutY="20.0" mnemonicParsing="false" text="!!" />
+            <Button layoutX="462.0" layoutY="20.0" mnemonicParsing="false" text="!!!" />
+         </children>
+      </HBox>
+      <Button layoutX="555.0" layoutY="20.0" mnemonicParsing="false" text="+" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+   </children>
+</AnchorPane>

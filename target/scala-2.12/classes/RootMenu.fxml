@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RootMenuController">
+   <left>
+      <HBox prefHeight="450.0" prefWidth="80.0" style="-fx-background-color: #222527;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="450.0" prefWidth="67.0">
+               <children>
+                  <StackPane prefHeight="80.0" prefWidth="80.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ic_todo.png" />
+                           </image>
+                           <StackPane.margin>
+                              <Insets left="13.0" />
+                           </StackPane.margin>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onAction="#showTodoView" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Button">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </StackPane>
+                  <StackPane prefHeight="80.0" prefWidth="80.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ic_timeline.png" />
+                           </image>
+                           <StackPane.margin>
+                              <Insets left="13.0" />
+                           </StackPane.margin>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onAction="#showTimelineView" opacity="0.0" prefHeight="68.0" prefWidth="99.0" text="Button">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                        </Button>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="80.0" prefWidth="80.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ic_settings.png" />
+                           </image>
+                           <StackPane.margin>
+                              <Insets left="13.0" />
+                           </StackPane.margin>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onAction="#showSettingsView" opacity="0.0" prefHeight="68.0" prefWidth="99.0" text="Button">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                        </Button>
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+            <ImageView fx:id="pointer" fitHeight="13.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@triangle.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="35.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+   </left>
+</BorderPane>
