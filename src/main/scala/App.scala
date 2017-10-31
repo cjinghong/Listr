@@ -15,11 +15,15 @@ object App extends JFXApp {
 	val roots = loader.getRoot[BorderPane]
 
 	stage = new PrimaryStage {
+		minWidth = 700
+		minHeight = 300
 		title = "Listr"
 		scene = new Scene(roots)
 	}
-
 	stage.getIcons.add(new Image(getClass.getResourceAsStream("appIcon.png")))
+
+	showToDoList()
+
 	def showToDoList(): Unit = {
 		val resource = getClass.getResourceAsStream("TodoList/TodoListView.fxml")
 		val loader = new FXMLLoader(null, NoDependencyResolver)
@@ -28,6 +32,11 @@ object App extends JFXApp {
 		this.roots.setCenter(todoListView)
 	}
 
-	showToDoList()
+	def showTimeline(): Unit = {
+		this.roots.setCenter(null)
+	}
 
+	def showSettings(): Unit = {
+		this.roots.setCenter(null)
+	}
 }

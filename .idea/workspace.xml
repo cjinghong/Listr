@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23092c67-c014-4d21-b769-8105e04f0105" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/TodoListViewController.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/App$$anon$1.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/App$$anon$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/App$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/App$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/App.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/App.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/RootMenuController$Controller.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/RootMenuController$Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/RootMenuController.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/RootMenuController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/TodoListViewController$Controller.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/TodoListViewController$Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/TodoList/TodoListView.fxml" afterPath="$PROJECT_DIR$/src/main/resources/TodoList/TodoListView.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/RootMenu.fxml" afterPath="$PROJECT_DIR$/src/main/resources/RootMenu.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/App.scala" afterPath="$PROJECT_DIR$/src/main/scala/App.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/RootMenuController.scala" afterPath="$PROJECT_DIR$/src/main/scala/RootMenuController.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/RootMenu.fxml" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/RootMenu.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="App.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/App.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="188">
+              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -39,20 +47,20 @@
       <file leaf-file-name="RootMenuController.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/RootMenuController.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="15" lean-forward="false" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+            <state relative-caret-position="311">
+              <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#0#44#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TodoListViewController.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TodoListViewController.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/TodoListViewController.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            <state relative-caret-position="173">
+              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -108,23 +116,14 @@
           </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="82" lean-forward="false" selection-start-line="8" selection-start-column="82" selection-end-line="8" selection-end-column="82" />
+              <caret line="8" column="117" lean-forward="false" selection-start-line="8" selection-start-column="117" selection-end-line="8" selection-end-column="117" />
               <folding>
-                <marker date="1509458845660" expanded="true" signature="1240:1408" ph="..." />
-                <marker date="1509458845660" expanded="true" signature="1286:1374" ph="..." />
-                <marker date="1509458845660" expanded="true" signature="1476:1547" ph="..." />
-                <marker date="1509458845660" expanded="true" signature="1643:2161" ph="..." />
-                <marker date="1509458845660" expanded="true" signature="1675:2161" ph="..." />
-                <marker date="1509458845660" expanded="true" signature="1785:2102" ph="..." />
-                <marker date="1509458845660" expanded="true" signature="1820:1919" ph="..." />
-                <marker date="1509458845660" expanded="true" signature="1965:2065" ph="..." />
-                <marker date="1509458845660" expanded="true" signature="3092:3357" ph="..." />
-                <marker date="1509458845660" expanded="true" signature="3092:3388" ph="..." />
-                <marker date="1509458845660" expanded="true" signature="3156:3324" ph="..." />
-                <marker date="1509458845660" expanded="true" signature="3202:3290" ph="..." />
-                <marker date="1509458845660" expanded="true" signature="3549:3768" ph="..." />
-                <marker date="1509458845660" expanded="true" signature="3572:3644" ph="..." />
-                <marker date="1509458845660" expanded="true" signature="3673:3743" ph="..." />
+                <marker date="1509462396269" expanded="true" signature="3589:3910" ph="..." />
+                <marker date="1509462396269" expanded="true" signature="3589:3924" ph="..." />
+                <marker date="1509462396269" expanded="true" signature="3589:3935" ph="..." />
+                <marker date="1509462396269" expanded="true" signature="3589:3949" ph="..." />
+                <marker date="1509462396269" expanded="true" signature="3829:3864" ph="..." />
+                <marker date="1509462396269" expanded="true" signature="3829:3889" ph="..." />
               </folding>
             </state>
           </provider>
@@ -153,12 +152,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/TodoListView.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/TodoItem.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/TodoList/TodoItem.fxml" />
-        <option value="$PROJECT_DIR$/src/main/scala/App.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/RootMenu.fxml" />
         <option value="$PROJECT_DIR$/build.sbt" />
-        <option value="$PROJECT_DIR$/src/main/scala/RootMenuController.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/TodoList/TodoListView.fxml" />
         <option value="$PROJECT_DIR$/src/main/scala/TodoListViewController.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/App.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/RootMenuController.scala" />
       </list>
     </option>
   </component>
@@ -417,12 +416,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1509452973282</updated>
-      <workItem from="1509452977651" duration="7411000" />
+      <workItem from="1509452977651" duration="8940000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7411000" />
+    <option name="totallyTimeSpent" value="8940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="725" extended-state="6" />
@@ -496,23 +495,14 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="82" lean-forward="false" selection-start-line="8" selection-start-column="82" selection-end-line="8" selection-end-column="82" />
+          <caret line="8" column="117" lean-forward="false" selection-start-line="8" selection-start-column="117" selection-end-line="8" selection-end-column="117" />
           <folding>
-            <marker date="1509458845660" expanded="true" signature="1240:1408" ph="..." />
-            <marker date="1509458845660" expanded="true" signature="1286:1374" ph="..." />
-            <marker date="1509458845660" expanded="true" signature="1476:1547" ph="..." />
-            <marker date="1509458845660" expanded="true" signature="1643:2161" ph="..." />
-            <marker date="1509458845660" expanded="true" signature="1675:2161" ph="..." />
-            <marker date="1509458845660" expanded="true" signature="1785:2102" ph="..." />
-            <marker date="1509458845660" expanded="true" signature="1820:1919" ph="..." />
-            <marker date="1509458845660" expanded="true" signature="1965:2065" ph="..." />
-            <marker date="1509458845660" expanded="true" signature="3092:3357" ph="..." />
-            <marker date="1509458845660" expanded="true" signature="3092:3388" ph="..." />
-            <marker date="1509458845660" expanded="true" signature="3156:3324" ph="..." />
-            <marker date="1509458845660" expanded="true" signature="3202:3290" ph="..." />
-            <marker date="1509458845660" expanded="true" signature="3549:3768" ph="..." />
-            <marker date="1509458845660" expanded="true" signature="3572:3644" ph="..." />
-            <marker date="1509458845660" expanded="true" signature="3673:3743" ph="..." />
+            <marker date="1509462396269" expanded="true" signature="3589:3910" ph="..." />
+            <marker date="1509462396269" expanded="true" signature="3589:3924" ph="..." />
+            <marker date="1509462396269" expanded="true" signature="3589:3935" ph="..." />
+            <marker date="1509462396269" expanded="true" signature="3589:3949" ph="..." />
+            <marker date="1509462396269" expanded="true" signature="3829:3864" ph="..." />
+            <marker date="1509462396269" expanded="true" signature="3829:3889" ph="..." />
           </folding>
         </state>
       </provider>
@@ -549,32 +539,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalafx/scalafx_2.12/srcs/scalafx_2.12-8.0.144-R12-sources.jar!/scalafx/scene/image/ImageView.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="42" column="6" lean-forward="false" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/TodoListViewController.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/RootMenuController.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="15" lean-forward="false" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+        <state relative-caret-position="311">
+          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/App.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="188">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/TodoListViewController.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>

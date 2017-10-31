@@ -6,13 +6,13 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RootMenuController">
+<BorderPane minHeight="300.0" minWidth="700.0" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RootMenuController">
    <left>
       <HBox prefHeight="450.0" prefWidth="80.0" style="-fx-background-color: #222527;" BorderPane.alignment="CENTER">
          <children>
             <VBox prefHeight="450.0" prefWidth="67.0">
                <children>
-                  <StackPane prefHeight="80.0" prefWidth="80.0">
+                  <StackPane fx:id="todoListStackPane" prefHeight="80.0" prefWidth="80.0">
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -32,7 +32,7 @@
                         <Insets />
                      </VBox.margin>
                   </StackPane>
-                  <StackPane prefHeight="80.0" prefWidth="80.0">
+                  <StackPane fx:id="timelineStackPane" prefHeight="80.0" prefWidth="80.0">
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -49,7 +49,7 @@
                         </Button>
                      </children>
                   </StackPane>
-                  <StackPane prefHeight="80.0" prefWidth="80.0">
+                  <StackPane fx:id="settingsStackPane" prefHeight="80.0" prefWidth="80.0">
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -68,12 +68,12 @@
                   </StackPane>
                </children>
             </VBox>
-            <ImageView fx:id="pointer" fitHeight="13.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="trianglePointer" fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@triangle.png" />
                </image>
                <HBox.margin>
-                  <Insets top="35.0" />
+                  <Insets top="33.0" />
                </HBox.margin>
             </ImageView>
          </children>
