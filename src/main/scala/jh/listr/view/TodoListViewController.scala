@@ -1,4 +1,5 @@
-import scalafx.beans.property.IntegerProperty
+package jh.listr.view
+
 import scalafx.event.ActionEvent
 import scalafx.scene.control.{Button, DatePicker, TextField}
 import scalafxml.core.macros.sfxml
@@ -23,19 +24,19 @@ class TodoListViewController(
 	// Low priority by default
 	setLowPriority(null)
 	def setLowPriority(action: ActionEvent): Unit = {
-		print("Low priority item")
+		println("Low priority item")
 		selectPriorityButton(lowPriorityButton)
 		todoItemPriority = 1
 	}
 
 	def setMediumPriority(action: ActionEvent): Unit = {
-		print("Medium priority item")
+		println("Medium priority item")
 		selectPriorityButton(mediumPriorityButton)
 		todoItemPriority = 2
 	}
 
 	def setHighPriority(action: ActionEvent): Unit = {
-		print("High priority item")
+		println("High priority item")
 		selectPriorityButton(highPriorityButton)
 		todoItemPriority = 3
 	}

@@ -1,15 +1,17 @@
+package jh
+
+import javafx.scene.layout._
+import scala.io.Source
 import scalafx.Includes._
 import scalafx.application.JFXApp
 import scalafx.application.JFXApp.PrimaryStage
-import scalafx.scene.{Parent, Scene}
-import scalafxml.core.{FXMLLoader, FXMLView, NoDependencyResolver}
-import javafx.scene.layout._
-
+import scalafx.scene.Scene
 import scalafx.scene.image.Image
+import scalafxml.core.{FXMLLoader, NoDependencyResolver}
 
 object App extends JFXApp {
 
-	val rootResource = getClass.getResourceAsStream("RootMenu.fxml")
+	val rootResource = getClass.getResourceAsStream("./listr/view/RootMenu.fxml")
 	val loader = new FXMLLoader(null, NoDependencyResolver)
 	loader.load(rootResource)
 	val roots = loader.getRoot[BorderPane]
@@ -25,7 +27,7 @@ object App extends JFXApp {
 	showToDoList()
 
 	def showToDoList(): Unit = {
-		val resource = getClass.getResourceAsStream("TodoList/TodoListView.fxml")
+		val resource = getClass.getResourceAsStream("./listr/view/TodoListView.fxml")
 		val loader = new FXMLLoader(null, NoDependencyResolver)
 		loader.load(resource)
 		val todoListView = loader.getRoot[AnchorPane]

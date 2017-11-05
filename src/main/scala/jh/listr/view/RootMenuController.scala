@@ -1,3 +1,6 @@
+package jh.listr.view
+
+import jh.App
 import scalafx.animation.TranslateTransition
 import scalafx.event.ActionEvent
 import scalafx.scene.image.ImageView
@@ -14,7 +17,7 @@ class RootMenuController(
                         ) {
 
 	def showTodoView(action: ActionEvent): Unit = {
-		println("Show todo view")
+		println("Show todo jh.listr.view")
 		App.showToDoList()
 
 		val transition = new TranslateTransition(Duration(300), trianglePointer)
@@ -23,7 +26,7 @@ class RootMenuController(
 	}
 
 	def showTimelineView(action: ActionEvent): Unit = {
-		println("Show timeline view")
+		println("Show timeline jh.listr.view")
 		App.showTimeline()
 
 		val transition = new TranslateTransition(Duration(300), trianglePointer)
@@ -32,7 +35,7 @@ class RootMenuController(
 	}
 
 	def showSettingsView(action: ActionEvent): Unit = {
-		println("Show settings view")
+		println("Show settings jh.listr.view")
 		App.showSettings()
 
 		val transition = new TranslateTransition(Duration(300), trianglePointer)

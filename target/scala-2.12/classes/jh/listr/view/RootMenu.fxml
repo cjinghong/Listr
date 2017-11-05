@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane minHeight="300.0" minWidth="700.0" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RootMenuController">
+<BorderPane minHeight="300.0" minWidth="700.0" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.RootMenuController">
    <left>
       <HBox prefHeight="450.0" prefWidth="80.0" style="-fx-background-color: #222527;" BorderPane.alignment="CENTER">
          <children>
@@ -16,7 +16,7 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@ic_todo.png" />
+                              <Image url="@jh/ic_todo.png" />
                            </image>
                            <StackPane.margin>
                               <Insets left="13.0" />
@@ -36,7 +36,7 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@ic_timeline.png" />
+                              <Image url="@jh/ic_timeline.png" />
                            </image>
                            <StackPane.margin>
                               <Insets left="13.0" />
@@ -53,7 +53,7 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@ic_settings.png" />
+                              <Image url="@jh/ic_settings.png" />
                            </image>
                            <StackPane.margin>
                               <Insets left="13.0" />
@@ -70,7 +70,7 @@
             </VBox>
             <ImageView fx:id="trianglePointer" fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@triangle.png" />
+                  <Image url="@jh/ic_triangle.png" />
                </image>
                <HBox.margin>
                   <Insets top="33.0" />
