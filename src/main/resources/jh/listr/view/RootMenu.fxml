@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane minHeight="300.0" minWidth="700.0" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.RootMenuController">
+<BorderPane maxHeight="450.0" maxWidth="700.0" minHeight="300.0" minWidth="700.0" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.RootMenuController">
    <left>
       <HBox prefHeight="450.0" prefWidth="80.0" style="-fx-background-color: #222527;" BorderPane.alignment="CENTER">
          <children>
@@ -22,7 +22,7 @@
                               <Insets left="13.0" />
                            </StackPane.margin>
                         </ImageView>
-                        <Button mnemonicParsing="false" onAction="#showTodoView" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Button">
+                        <Button mnemonicParsing="false" onAction="#showTodoListView" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Button">
                            <StackPane.margin>
                               <Insets />
                            </StackPane.margin>

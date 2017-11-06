@@ -20,6 +20,6 @@
          </children>
       </HBox>
       <Button fx:id="addButton" layoutX="555.0" layoutY="20.0" mnemonicParsing="false" onAction="#addTodoItem" text="+" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
-      <TableView fx:id="tableView" layoutX="184.0" layoutY="67.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
+      <TableView fx:id="tableView" layoutX="184.0" layoutY="60.0" prefHeight="190.0" prefWidth="568.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
    </children>
 </AnchorPane>

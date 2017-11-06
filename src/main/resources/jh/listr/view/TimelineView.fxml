@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.TimelineViewController">
+   <children>
+      <ScrollPane layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane prefHeight="397.0">
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox fx:id="hbox" spacing="16.0">
+                           <children>
+                              <Circle fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                           </children>
+                           <padding>
+                              <Insets top="100.0" />
+                           </padding>
+                           <StackPane.margin>
+                              <Insets left="16.0" right="16.0" />
+                           </StackPane.margin>
+                        </HBox>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

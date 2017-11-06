@@ -2,15 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23092c67-c014-4d21-b769-8105e04f0105" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/TodoItemController$Controller.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/TodoItemController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/TodoListViewController$Controller.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/TodoListViewController.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/jh/listr/view/TimelineView.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/jh/listr/view/TimelineViewController.scala" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/TodoItem.fxml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/jh/listr/view/TodoItem.fxml" afterPath="$PROJECT_DIR$/src/main/resources/jh/listr/view/TodoItemView.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/jh/App$$anon$1.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/jh/App$$anon$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/jh/App$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/jh/App$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/jh/App$delayedInit$body.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/jh/App$delayedInit$body.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/RootMenuController$Controller.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/RootMenuController$Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/RootMenuController.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/RootMenuController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/TodoItemController$Controller.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/TodoItemController$Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/TodoListViewController$Controller.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/TodoListViewController$Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/jh/listr/view/TodoItem.fxml" afterPath="$PROJECT_DIR$/src/main/resources/jh/listr/view/TodoItem.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/jh/listr/view/RootMenu.fxml" afterPath="$PROJECT_DIR$/src/main/resources/jh/listr/view/RootMenu.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/jh/listr/view/TodoListView.fxml" afterPath="$PROJECT_DIR$/src/main/resources/jh/listr/view/TodoListView.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/jh/App.scala" afterPath="$PROJECT_DIR$/src/main/scala/jh/App.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/jh/listr/view/RootMenuController.scala" afterPath="$PROJECT_DIR$/src/main/scala/jh/listr/view/RootMenuController.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/jh/listr/view/TodoItemController.scala" afterPath="$PROJECT_DIR$/src/main/scala/jh/listr/view/TodoItemController.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/jh/listr/view/TodoListViewController.scala" afterPath="$PROJECT_DIR$/src/main/scala/jh/listr/view/TodoListViewController.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/RootMenu.fxml" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/RootMenu.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/TodoListView.fxml" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/TodoListView.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,69 +40,7 @@
     </projectState>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/jh/App.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="e#12#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TodoListViewController.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/view/TodoListViewController.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="49" column="45" lean-forward="false" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
-              <folding>
-                <element signature="e#23#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TodoItemController.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/view/TodoItemController.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="26" column="79" lean-forward="false" selection-start-line="26" selection-start-column="79" selection-end-line="26" selection-end-column="79" />
-              <folding>
-                <element signature="e#23#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TodoItem.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/model/TodoItem.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-              <folding>
-                <element signature="e#23#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RootMenu.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/jh/listr/view/RootMenu.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="72" column="37" lean-forward="false" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -106,6 +54,10 @@
       <find>@</find>
       <find>TodoItemController</find>
       <find>ECEC</find>
+      <find>flatRedColorHex</find>
+      <find>lowPriorityButton</find>
+      <find>createTodoItemCell</find>
+      <find>showTodoView</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -136,13 +88,15 @@
         <option value="$PROJECT_DIR$/src/main/resources/jh/scriptFile.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/jh/listr/view/RootMenu.fxml" />
         <option value="$PROJECT_DIR$/src/main/scala/jh/listr/model/Importance.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/jh/listr/view/RootMenuController.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/jh/listr/view/TodoListView.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/jh/listr/view/TodoItem.fxml" />
-        <option value="$PROJECT_DIR$/src/main/scala/jh/App.scala" />
+        <option value="$PROJECT_DIR$/src/main/resources/jh/listr/view/TimelineView.fxml" />
+        <option value="$PROJECT_DIR$/src/main/scala/jh/listr/view/TimelineViewController.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/jh/listr/model/TodoItem.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/jh/listr/view/TodoListViewController.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/jh/listr/view/TodoItemController.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/jh/listr/view/RootMenuController.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/jh/App.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/jh/listr/view/TodoListViewController.scala" />
       </list>
     </option>
   </component>
@@ -158,11 +112,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="1280" />
-    <option name="y" value="32" />
-    <option name="width" value="1366" />
-    <option name="height" value="768" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1366" />
+    <option name="y" value="55" />
+    <option name="width" value="1280" />
+    <option name="height" value="725" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -490,16 +444,15 @@
       <workItem from="1509881656573" duration="8043000" />
       <workItem from="1509942715305" duration="6312000" />
       <workItem from="1509950787710" duration="7409000" />
-      <workItem from="1509964450415" duration="6936000" />
+      <workItem from="1509964450415" duration="12883000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41387000" />
+    <option name="totallyTimeSpent" value="47334000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="32" width="1366" height="768" extended-state="0" />
-    <editor active="true" />
+    <frame x="1366" y="55" width="1280" height="725" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -510,10 +463,10 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44892088" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4952381" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31654677" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31587303" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -521,7 +474,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32698414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2620846" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28029078" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -541,7 +494,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="18" />
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -554,32 +507,12 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/view/TodoListViewController.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-          <folding>
-            <element signature="e#23#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/jh/App.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/view/RootMenuController.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="34" column="5" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding>
-            <element signature="e#23#36#0" expanded="true" />
+            <element signature="e#23#36#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -590,6 +523,9 @@
           <caret line="74" column="48" lean-forward="false" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
           <folding>
             <element signature="e#23#49#0" expanded="true" />
+            <element signature="e#2923#3133#0" expanded="false" />
+            <element signature="e#3135#3360#0" expanded="false" />
+            <element signature="e#3362#3577#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -610,7 +546,7 @@
         <state relative-caret-position="285">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="e#23#49#0" expanded="true" />
+            <element signature="e#23#49#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -651,7 +587,7 @@
         <state relative-caret-position="30">
           <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding>
-            <element signature="e#23#36#0" expanded="true" />
+            <element signature="e#23#36#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -682,6 +618,9 @@
           <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
           <folding>
             <element signature="e#23#49#0" expanded="true" />
+            <element signature="e#2923#3133#0" expanded="false" />
+            <element signature="e#3135#3360#0" expanded="false" />
+            <element signature="e#3362#3577#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -691,7 +630,7 @@
         <state relative-caret-position="450">
           <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
           <folding>
-            <element signature="e#23#36#0" expanded="true" />
+            <element signature="e#23#36#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -725,7 +664,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jh/listr/view/TodoItem.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jh/listr/view/TodoItemView.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
@@ -751,6 +690,9 @@
           <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
           <folding>
             <element signature="e#23#49#0" expanded="true" />
+            <element signature="e#2923#3133#0" expanded="false" />
+            <element signature="e#3135#3360#0" expanded="false" />
+            <element signature="e#3362#3577#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -760,7 +702,7 @@
         <state relative-caret-position="450">
           <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
           <folding>
-            <element signature="e#23#36#0" expanded="true" />
+            <element signature="e#23#36#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -783,7 +725,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jh/listr/view/TodoItem.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jh/listr/view/TodoItemView.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
@@ -914,6 +856,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
           <caret line="2547" column="0" lean-forward="false" selection-start-line="2547" selection-start-column="0" selection-end-line="2547" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -935,13 +878,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="211" column="0" lean-forward="false" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+          <folding>
+            <element signature="e#7937#7938#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jh/listr/view/TodoItem.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jh/listr/view/TimelineView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="257" lean-forward="false" selection-start-line="10" selection-start-column="257" selection-end-line="10" selection-end-column="257" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/model/TodoItem.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <caret line="17" column="71" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="17" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jh/listr/view/TodoItemView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="246" lean-forward="true" selection-start-line="15" selection-start-column="246" selection-end-line="15" selection-end-column="246" />
           <folding>
             <marker date="1509970781954" expanded="true" signature="1079:1100" ph="..." />
           </folding>
@@ -951,20 +916,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/view/RootMenuController.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="32" column="33" lean-forward="false" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-          <folding>
-            <element signature="e#23#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/jh/App.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="-110">
+          <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
           <folding>
             <element signature="e#12#38#0" expanded="true" />
           </folding>
@@ -973,31 +928,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/view/TodoListViewController.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="49" column="45" lean-forward="false" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
+        <state relative-caret-position="295">
+          <caret line="130" column="0" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
           <folding>
             <element signature="e#23#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/model/TodoItem.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-          <folding>
-            <element signature="e#23#49#0" expanded="true" />
+            <element signature="e#2923#3133#0" expanded="false" />
+            <element signature="e#3135#3360#0" expanded="false" />
+            <element signature="e#3362#3577#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/view/TodoItemController.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="26" column="79" lean-forward="false" selection-start-line="26" selection-start-column="79" selection-end-line="26" selection-end-column="79" />
+        <state relative-caret-position="-35">
+          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
           <folding>
             <element signature="e#23#36#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/view/TimelineViewController.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#23#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/view/RootMenuController.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

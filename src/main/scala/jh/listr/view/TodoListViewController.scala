@@ -29,9 +29,6 @@ class TodoListViewController(
 	    private val highPriorityButton: Button,
 	    private val addButton: Button,
 
-		// For the list of items
-//        private val vbox: VBox
-
 	    private val tableView: TableView[TodoItem]
 	) {
 
@@ -43,6 +40,7 @@ class TodoListViewController(
 	setLowPriority()                        // Low priority by default
 	setupTableView()
 
+	// Setup the table view, along with its custom cell factory
 	private def setupTableView(): Unit = {
 		tableView.columnResizePolicy = TableView.ConstrainedResizePolicy
 		tableView.style =
@@ -51,6 +49,8 @@ class TodoListViewController(
 			"-fx-selection-bar: transparent; " +
 			"-fx-selection-bar-non-focused: transparent;"
 
+		// Detect when an item is selected
+		// TODO: - Shows popup dialog to edit the TodoItem
 		tableView.getSelectionModel.selectedItemProperty().addListener( { (item) =>
 			val todoItem = item.asInstanceOf[ReadOnlyObjectPropertyBase[TodoItem]].getValue
 			println(todoItem.title.value + " selected")
@@ -74,47 +74,59 @@ class TodoListViewController(
 					if (item == null) {
 						cell.setGraphic(null)
 					} else {
-						cell.setGraphic(createTodoItemCell(item))
+						val resource = getClass.getResourceAsStream("TodoItemView.fxml")
+						val loader = new FXMLLoader(null, NoDependencyResolver)
+						loader.load(resource)
+						val controller = loader.getController[TodoItemController#Controller]()
+						controller.setTodoItem(item)
+						cell.setGraphic(loader.getRoot[AnchorPane])
 					}
 				}
 				cell
 			}
 		}
-
-		def createTodoItemCell(item: TodoItem): AnchorPane = {
-			val resource = getClass.getResourceAsStream("TodoItem.fxml")
-			val loader = new FXMLLoader(null, NoDependencyResolver)
-			loader.load(resource)
-			val controller = loader.getController[TodoItemController#Controller]()
-			controller.setTodoItem(item)
-			return loader.getRoot[AnchorPane]
-		}
-
 	}
 
+	// Setting item priority. Each function is connected to the different buttons
+
+	/**
+	  * Set the TodoItem's `importance` to low priority
+	  * */
 	def setLowPriority(): Unit = {
 		println("Low priority item")
 		selectPriorityButton(lowPriorityButton)
 		todoItemImportance = Importance.Low
 	}
-
+	/**
+	  * Set the TodoItem's `importance` to medium priority
+	  * */
 	def setMediumPriority(): Unit = {
 		println("Medium priority item")
 		selectPriorityButton(mediumPriorityButton)
 		todoItemImportance = Importance.Medium
 	}
-
+	/**
+	  * Set the TodoItem's `importance` to high priority
+	  * */
 	def setHighPriority(): Unit = {
 		println("High priority item")
 		selectPriorityButton(highPriorityButton)
 		todoItemImportance = Importance.High
 	}
 
+	/**
+	  * Adds and save the new TodoItem, only if there is a title
+	  * */
 	def addTodoItem(): Unit = {
 		val title = titleTextField.text.value
 		val date = datePicker.getValue
-		val newItem = new TodoItem(title, date, todoItemImportance)
-		App.todoItems.add(newItem)
+
+		if (title.isEmpty) {
+			// TODO: - Highlight the title text field (RED)
+		} else {
+			val newItem = new TodoItem(title, date, todoItemImportance)
+			App.todoItems.add(newItem)
+		}
 	}
 
 	private def selectPriorityButton(button: Button): Unit = {
@@ -123,11 +135,9 @@ class TodoListViewController(
 		mediumPriorityButton.setStyle("")
 		highPriorityButton.setStyle("")
 
-		val style = "-fx-background-color: " + flatRedColorHex + "; " +
-					"-fx-text-fill: white"
-
 		// Style the selected button
-		button.setStyle(style)
+		button.style = "-fx-background-color: " + flatRedColorHex + "; " +
+			"-fx-text-fill: white"
 	}
 
 }
