@@ -4,7 +4,7 @@ import java.util.{Calendar, Date}
 
 import jh.listr.model.Importance.Importance
 
-import scalafx.beans.property.{StringProperty, IntegerProperty, ObjectProperty}
+import scalafx.beans.property.{BooleanProperty, IntegerProperty, ObjectProperty, StringProperty}
 import java.time.LocalDate;
 
 /**
@@ -18,8 +18,13 @@ import java.time.LocalDate;
   *                   Default value is `Importance.Low` unless changed.
   * @example val todoItem = TodoItem("Do homework", new Date(), Importance.High)
   */
-class TodoItem(titleS: String, dateD: Date, importanceI: Importance = Importance.Low) {
-	var title: StringProperty = new StringProperty(titleS)g
-	var date: ObjectProperty[Date] = ObjectProperty(dateD)
+class TodoItem(titleS: String, dateD: LocalDate, importanceI: Importance = Importance.Low) {
+	var title: StringProperty = new StringProperty(titleS)
+	var date: ObjectProperty[LocalDate] = ObjectProperty(dateD)
 	var importance: ObjectProperty[Importance.Value] = ObjectProperty(importanceI)
+	var completed: BooleanProperty = BooleanProperty(false)
+
+	def asProperty(): ObjectProperty[TodoItem] = {
+		ObjectProperty(this)
+	}
 }

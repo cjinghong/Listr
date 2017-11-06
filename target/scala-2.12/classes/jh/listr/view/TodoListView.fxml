@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,9 +8,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.TodoListViewController">
+<AnchorPane prefHeight="250.0" prefWidth="568.0" style="-fx-focus-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.TodoListViewController">
    <children>
-      <VBox layoutX="147.0" layoutY="62.0" prefHeight="338.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
       <TextField fx:id="titleTextField" layoutX="47.0" layoutY="33.0" promptText="What to do?" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
       <DatePicker fx:id="datePicker" editable="false" layoutX="203.0" layoutY="20.0" promptText="Due Date" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="20.0" />
       <HBox layoutX="412.0" layoutY="20.0" spacing="10.0" AnchorPane.leftAnchor="412.0" AnchorPane.topAnchor="20.0">
@@ -19,6 +19,7 @@
             <Button fx:id="highPriorityButton" layoutX="462.0" layoutY="20.0" mnemonicParsing="false" onAction="#setHighPriority" text="!!!" />
          </children>
       </HBox>
-      <Button fx:id="addButton" layoutX="555.0" layoutY="20.0" mnemonicParsing="false" text="+" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <Button fx:id="addButton" layoutX="555.0" layoutY="20.0" mnemonicParsing="false" onAction="#addTodoItem" text="+" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <TableView fx:id="tableView" layoutX="184.0" layoutY="67.0" prefHeight="200.0" prefWidth="200.0" style="-fx-table-cell-border-color: transparent; -fx-focus-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
    </children>
 </AnchorPane>
