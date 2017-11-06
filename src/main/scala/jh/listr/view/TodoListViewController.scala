@@ -2,7 +2,9 @@ package jh.listr.view
 
 import java.time.LocalDate
 import java.util.Date
+import javafx.beans.property.ReadOnlyObjectPropertyBase
 import javafx.scene.layout.{AnchorPane, BorderPane}
+import javax.swing.event.{ChangeEvent, ChangeListener}
 
 import jh.App
 import jh.listr.model.{Importance, TodoItem}
@@ -43,7 +45,16 @@ class TodoListViewController(
 
 	private def setupTableView(): Unit = {
 		tableView.columnResizePolicy = TableView.ConstrainedResizePolicy
-		tableView.selectionModel = null
+		tableView.style =
+			"-fx-table-cell-border-color: transparent;" +
+			"-fx-focus-color: transparent;" +
+			"-fx-selection-bar: transparent; " +
+			"-fx-selection-bar-non-focused: transparent;"
+
+		tableView.getSelectionModel.selectedItemProperty().addListener( { (item) =>
+			val todoItem = item.asInstanceOf[ReadOnlyObjectPropertyBase[TodoItem]].getValue
+			println(todoItem.title.value + " selected")
+		})
 
 		if (App.todoItems != null) {
 			tableView.setItems(App.todoItems)
@@ -51,9 +62,7 @@ class TodoListViewController(
 			val column = new TableColumn[TodoItem, TodoItem]()
 			tableView.columns.add(column)
 
-			// Todo: - Hide table header
-//			val header = tableView.lookup("TableHeaderRow")
-
+			column.sortable = false
 			column.text = ""
 			column.cellValueFactory = { _.value.asProperty }
 			column.cellFactory = { _ =>

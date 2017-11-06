@@ -9,10 +9,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="root" minWidth="400.0" prefHeight="60.0" prefWidth="0.0" style="-fx-focus-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.TodoItemController">
+<AnchorPane fx:id="root" minWidth="400.0" prefHeight="60.0" prefWidth="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.TodoItemController">
    <children>
       <Text fx:id="title" layoutX="14.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clean Room" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
-      <CheckBox fx:id="checkBox" layoutX="662.0" layoutY="21.0" mnemonicParsing="false" onAction="#checkboxClicked" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="21.0" />
+      <CheckBox fx:id="checkBox" layoutX="662.0" layoutY="21.0" mnemonicParsing="false" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="21.0" />
       <Rectangle fx:id="line" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="1.0" layoutX="6.0" layoutY="28.0" stroke="#00000048" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" width="350.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
    </children>
 </AnchorPane>
