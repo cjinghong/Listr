@@ -1,0 +1,23 @@
+# Created by Jayesh J.
+
+*.class
+*.log
+*.iml
+*.ipr
+*.iws
+.idea
+out
+.cache/
+.history/
+.lib/
+dist/*
+target/
+bin/
+libexec/
+lib_managed/
+src_managed/
+logs/
+project/
+target/
+.scala_dependencies
+.worksheet

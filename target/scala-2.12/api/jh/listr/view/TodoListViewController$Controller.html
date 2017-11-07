@@ -228,9 +228,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="jh.listr.view.TodoListViewController.Controller#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(titleTextField:scalafx.scene.control.TextField,datePicker:scalafx.scene.control.DatePicker,lowPriorityButton:scalafx.scene.control.Button,mediumPriorityButton:scalafx.scene.control.Button,highPriorityButton:scalafx.scene.control.Button,addButton:scalafx.scene.control.Button):TodoListViewController.this.Controller"></a><a id="&lt;init&gt;:Controller"></a>
+      <a id="&lt;init&gt;(titleTextField:scalafx.scene.control.TextField,datePicker:scalafx.scene.control.DatePicker,lowPriorityButton:scalafx.scene.control.Button,mediumPriorityButton:scalafx.scene.control.Button,highPriorityButton:scalafx.scene.control.Button,addButton:scalafx.scene.control.Button,tableView:scalafx.scene.control.TableView[jh.listr.model.TodoItem]):TodoListViewController.this.Controller"></a><a id="&lt;init&gt;:Controller"></a>
       <span class="permalink">
-      <a href="../../../jh/listr/view/TodoListViewController$Controller.html#&lt;init&gt;(titleTextField:scalafx.scene.control.TextField,datePicker:scalafx.scene.control.DatePicker,lowPriorityButton:scalafx.scene.control.Button,mediumPriorityButton:scalafx.scene.control.Button,highPriorityButton:scalafx.scene.control.Button,addButton:scalafx.scene.control.Button):TodoListViewController.this.Controller" title="Permalink">
+      <a href="../../../jh/listr/view/TodoListViewController$Controller.html#&lt;init&gt;(titleTextField:scalafx.scene.control.TextField,datePicker:scalafx.scene.control.DatePicker,lowPriorityButton:scalafx.scene.control.Button,mediumPriorityButton:scalafx.scene.control.Button,highPriorityButton:scalafx.scene.control.Button,addButton:scalafx.scene.control.Button,tableView:scalafx.scene.control.TableView[jh.listr.model.TodoItem]):TodoListViewController.this.Controller" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -239,7 +239,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Controller</span><span class="params">(<span name="titleTextField">titleTextField: <span class="extype" name="scalafx.scene.control.TextField">TextField</span></span>, <span name="datePicker">datePicker: <span class="extype" name="scalafx.scene.control.DatePicker">DatePicker</span></span>, <span name="lowPriorityButton">lowPriorityButton: <span class="extype" name="scalafx.scene.control.Button">Button</span></span>, <span name="mediumPriorityButton">mediumPriorityButton: <span class="extype" name="scalafx.scene.control.Button">Button</span></span>, <span name="highPriorityButton">highPriorityButton: <span class="extype" name="scalafx.scene.control.Button">Button</span></span>, <span name="addButton">addButton: <span class="extype" name="scalafx.scene.control.Button">Button</span></span>)</span>
+        <span class="name">Controller</span><span class="params">(<span name="titleTextField">titleTextField: <span class="extype" name="scalafx.scene.control.TextField">TextField</span></span>, <span name="datePicker">datePicker: <span class="extype" name="scalafx.scene.control.DatePicker">DatePicker</span></span>, <span name="lowPriorityButton">lowPriorityButton: <span class="extype" name="scalafx.scene.control.Button">Button</span></span>, <span name="mediumPriorityButton">mediumPriorityButton: <span class="extype" name="scalafx.scene.control.Button">Button</span></span>, <span name="highPriorityButton">highPriorityButton: <span class="extype" name="scalafx.scene.control.Button">Button</span></span>, <span name="addButton">addButton: <span class="extype" name="scalafx.scene.control.Button">Button</span></span>, <span name="tableView">tableView: <span class="extype" name="scalafx.scene.control.TableView">TableView</span>[<a href="../model/TodoItem.html" class="extype" name="jh.listr.model.TodoItem">TodoItem</a>]</span>)</span>
       </span>
       
       
@@ -301,6 +301,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="jh.listr.view.TodoListViewController.Controller#addTodoItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="addTodoItem():Unit"></a>
+      <span class="permalink">
+      <a href="../../../jh/listr/view/TodoListViewController$Controller.html#addTodoItem():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addTodoItem</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Adds and save the new TodoItem, only if there is a title</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -490,9 +506,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="jh.listr.view.TodoListViewController.Controller#setHighPriority" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setHighPriority(action:scalafx.event.ActionEvent):Unit"></a><a id="setHighPriority(ActionEvent):Unit"></a>
+      <a id="setHighPriority():Unit"></a>
       <span class="permalink">
-      <a href="../../../jh/listr/view/TodoListViewController$Controller.html#setHighPriority(action:scalafx.event.ActionEvent):Unit" title="Permalink">
+      <a href="../../../jh/listr/view/TodoListViewController$Controller.html#setHighPriority():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -501,14 +517,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setHighPriority</span><span class="params">(<span name="action">action: <span class="extype" name="scalafx.event.ActionEvent">ActionEvent</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">setHighPriority</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      
+      <p class="shortcomment cmt">Set the TodoItem's <code>importance</code> to high priority</p>
     </li><li name="jh.listr.view.TodoListViewController.Controller#setLowPriority" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setLowPriority(action:scalafx.event.ActionEvent):Unit"></a><a id="setLowPriority(ActionEvent):Unit"></a>
+      <a id="setLowPriority():Unit"></a>
       <span class="permalink">
-      <a href="../../../jh/listr/view/TodoListViewController$Controller.html#setLowPriority(action:scalafx.event.ActionEvent):Unit" title="Permalink">
+      <a href="../../../jh/listr/view/TodoListViewController$Controller.html#setLowPriority():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -517,14 +533,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setLowPriority</span><span class="params">(<span name="action">action: <span class="extype" name="scalafx.event.ActionEvent">ActionEvent</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">setLowPriority</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      
+      <p class="shortcomment cmt">Set the TodoItem's <code>importance</code> to low priority</p>
     </li><li name="jh.listr.view.TodoListViewController.Controller#setMediumPriority" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setMediumPriority(action:scalafx.event.ActionEvent):Unit"></a><a id="setMediumPriority(ActionEvent):Unit"></a>
+      <a id="setMediumPriority():Unit"></a>
       <span class="permalink">
-      <a href="../../../jh/listr/view/TodoListViewController$Controller.html#setMediumPriority(action:scalafx.event.ActionEvent):Unit" title="Permalink">
+      <a href="../../../jh/listr/view/TodoListViewController$Controller.html#setMediumPriority():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -533,10 +549,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setMediumPriority</span><span class="params">(<span name="action">action: <span class="extype" name="scalafx.event.ActionEvent">ActionEvent</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">setMediumPriority</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      
+      <p class="shortcomment cmt">Set the TodoItem's <code>importance</code> to medium priority</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">

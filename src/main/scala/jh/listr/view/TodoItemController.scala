@@ -27,11 +27,10 @@ class TodoItemController (
 	private val defaultColor = Color(68.0/255.0, 108.0/255.0, 179.0/255.0, 0.8)
 
 
-	/**
-	  * Populates node with the given `TodoItem`
+	/** Populates node with the given `TodoItem`
 	  *
 	  * @param item The TodoItem to be displayed in the view
-	  * */
+	  */
 	def setTodoItem(item: TodoItem): Unit = {
 		this.item = item
 		title.text <== item.title

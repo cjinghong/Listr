@@ -7,7 +7,7 @@ import javafx.scene.layout.{AnchorPane, BorderPane}
 import javax.swing.event.{ChangeEvent, ChangeListener}
 
 import jh.App
-import jh.listr.model.{Importance, TodoItem}
+import jh.listr.model.{Importance, ListrTheme, TodoItem}
 import jh.listr.model.Importance.Importance
 
 import scalafx.beans.property.ObjectProperty
@@ -89,34 +89,26 @@ class TodoListViewController(
 
 	// Setting item priority. Each function is connected to the different buttons
 
-	/**
-	  * Set the TodoItem's `importance` to low priority
-	  * */
+	/** Set the TodoItem's `importance` to low priority */
 	def setLowPriority(): Unit = {
 		println("Low priority item")
 		selectPriorityButton(lowPriorityButton)
 		todoItemImportance = Importance.Low
 	}
-	/**
-	  * Set the TodoItem's `importance` to medium priority
-	  * */
+	/** Set the TodoItem's `importance` to medium priority */
 	def setMediumPriority(): Unit = {
 		println("Medium priority item")
 		selectPriorityButton(mediumPriorityButton)
 		todoItemImportance = Importance.Medium
 	}
-	/**
-	  * Set the TodoItem's `importance` to high priority
-	  * */
+	/** Set the TodoItem's `importance` to high priority */
 	def setHighPriority(): Unit = {
 		println("High priority item")
 		selectPriorityButton(highPriorityButton)
 		todoItemImportance = Importance.High
 	}
 
-	/**
-	  * Adds and save the new TodoItem, only if there is a title
-	  * */
+	/** Adds and save the new TodoItem, only if there is a title */
 	def addTodoItem(): Unit = {
 		val title = titleTextField.text.value
 		val date = datePicker.getValue

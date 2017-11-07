@@ -16,27 +16,21 @@ class RootMenuController(
                         private val trianglePointer: ImageView
                         ) {
 
-	/**
-	  * Display the TodoListView, and move the triangular pointer to the correct position
-	  * */
+	/** Display the TodoListView, and move the triangular pointer to the correct position */
 	def showTodoListView(): Unit = {
 		App.showToDoList()
 		val transition = new TranslateTransition(Duration(300), trianglePointer)
 		transition.toY = 0
 		transition.play()
 	}
-	/**
-	  * Display the TimelineView, and move the triangular pointer to the correct position
-	  * */
+	/** Display the TimelineView, and move the triangular pointer to the correct position */
 	def showTimelineView(): Unit = {
 		App.showTimeline()
 		val transition = new TranslateTransition(Duration(300), trianglePointer)
 		transition.toY = 113 - 33
 		transition.play()
 	}
-	/**
-	  * Display the SettingsView, and move the triangular pointer to the correct position
-	  * */
+	/** Display the SettingsView, and move the triangular pointer to the correct position */
 	def showSettingsView(): Unit = {
 		App.showSettings()
 		val transition = new TranslateTransition(Duration(300), trianglePointer)
