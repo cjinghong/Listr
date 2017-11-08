@@ -32,9 +32,14 @@ TODO for the team (Please read)
 - Adam Xavier
 	1. CRC Cards
 	2. UML Diagrams
+	3. Report
+
+- Sam
+	1. Dialog popup for editing TodoItem
+		- The dialog popup should appear when the todo item is tapped on, and the user can edit it and save. Or cancel.
 
 - Shum Ka Poh
-	1. Edit TodoItem Dialog popup
+	1. 
 
 - Chan Jing Hong
 	1. Designing of backbone and wireframe of the application
