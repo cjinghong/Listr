@@ -13,14 +13,14 @@ import java.time.LocalDate;
   * @constructor Create a new `TodoItem` by specifying the `title`, `date`,
   *              and `importance`.
   * @param titleS The TodoItem's title.
-  * @param dateD The TodoItem's date, in epoch.
+  * @param dateD The TodoItem's date.
   * @param importanceI The level of importance for this particular TodoItem.
   *                   Default value is `Importance.Low` unless changed.
   * @example val todoItem = TodoItem("Do homework", new Date(), Importance.High)
   */
-class TodoItem(titleS: String, dateD: LocalDate, importanceI: Importance = Importance.Low) {
+class TodoItem(titleS: String, dateD: Date, importanceI: Importance = Importance.Low) {
 	var title: StringProperty = new StringProperty(titleS)
-	var date: ObjectProperty[LocalDate] = ObjectProperty(dateD)
+	var date: ObjectProperty[Date] = ObjectProperty(dateD)
 	var importance: ObjectProperty[Importance.Value] = ObjectProperty(importanceI)
 	var completed: BooleanProperty = BooleanProperty(false)
 

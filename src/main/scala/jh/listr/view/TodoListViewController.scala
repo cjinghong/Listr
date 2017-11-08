@@ -4,19 +4,12 @@ import java.time.LocalDate
 import java.util.Date
 import javafx.beans.property.ReadOnlyObjectPropertyBase
 import javafx.scene.layout.{AnchorPane, BorderPane}
-import javax.swing.event.{ChangeEvent, ChangeListener}
 
 import jh.App
 import jh.listr.model.{Importance, ListrTheme, TodoItem}
 import jh.listr.model.Importance.Importance
 
-import scalafx.beans.property.ObjectProperty
-import scalafx.beans.value.ObservableValue
-import scalafx.scene.Node
 import scalafx.scene.control._
-import scalafx.scene.layout.{Pane, VBox}
-import scalafx.scene.paint.Color
-import scalafx.scene.shape.Circle
 import scalafxml.core.{FXMLLoader, NoDependencyResolver}
 import scalafxml.core.macros.sfxml
 
@@ -52,8 +45,10 @@ class TodoListViewController(
 		// Detect when an item is selected
 		// TODO: - Shows popup dialog to edit the TodoItem
 		tableView.getSelectionModel.selectedItemProperty().addListener( { (item) =>
-			val todoItem = item.asInstanceOf[ReadOnlyObjectPropertyBase[TodoItem]].getValue
-			println(todoItem.title.value + " selected")
+			if (item != null) {
+				val todoItem = item.asInstanceOf[ReadOnlyObjectPropertyBase[TodoItem]].getValue
+				println(todoItem.title.value + " selected")
+			}
 		})
 
 		if (App.todoItems != null) {
@@ -111,7 +106,7 @@ class TodoListViewController(
 	/** Adds and save the new TodoItem, only if there is a title */
 	def addTodoItem(): Unit = {
 		val title = titleTextField.text.value
-		val date = datePicker.getValue
+		val date = java.sql.Date.valueOf(datePicker.getValue)
 
 		if (title.isEmpty) {
 			// TODO: - Highlight the title text field (RED)
