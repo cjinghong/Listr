@@ -28,3 +28,5 @@ class TodoItem(titleS: String, dateD: Date, importanceI: Importance = Importance
 		ObjectProperty(this)
 	}
 }
+
+

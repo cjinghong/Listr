@@ -1,13 +1,16 @@
 package jh.listr.view
 
+import java.text.SimpleDateFormat
+
 import jh.App
 import jh.listr.model.TodoItem
 
+import scalafx.beans.property.StringProperty
 import scalafx.geometry.Insets
-import scalafx.scene.control.{CheckBox}
+import scalafx.scene.control.CheckBox
 import scalafx.scene.layout.{AnchorPane, Background, BackgroundFill, CornerRadii}
-import scalafx.scene.paint.{Color}
-import scalafx.scene.shape.{Rectangle}
+import scalafx.scene.paint.Color
+import scalafx.scene.shape.Rectangle
 import scalafx.scene.text.Text
 import scalafxml.core.macros.sfxml
 
@@ -15,11 +18,14 @@ import scalafxml.core.macros.sfxml
 class TodoItemController (
         private val root: AnchorPane,
 	    private val title: Text,
+        private val dateText: Text,
 	    private val checkBox: CheckBox,
 	    private val line: Rectangle
     ) {
 
 	private var item: TodoItem = null
+	private val dateTextProperty = new StringProperty("")
+
 
 	// Resize line when the view is resized
 	line.width <== root.width * 0.9
@@ -34,8 +40,16 @@ class TodoItemController (
 	def setTodoItem(item: TodoItem): Unit = {
 		this.item = item
 		title.text <== item.title
+
+		val dateFormatter = new SimpleDateFormat("dd/MM/yyyy")
+
 		line.visible <== item.completed
 		checkBox.selected <==> item.completed
+
+		dateText.text = dateFormatter.format(item.date.value)
+		item.date.onChange({ (_, _, newValue) =>
+			dateText.text = dateFormatter.format(newValue)
+		})
 
 		// Set the background color according to the completed state of the todoitem
 		updateBackgroundState(item.completed.value)
@@ -54,10 +68,12 @@ class TodoItemController (
 		if (completed) {
 			// Set text to black, background to transparent
 			title.fill = Color.Black
+			dateText.fill = Color.Black
 			root.background = null
 		} else {
 			// Set text to white, background to blue
 			title.fill = Color.White
+			dateText.fill = Color.White
 			root.setBackground(
 				new Background(
 					Array(new BackgroundFill(defaultColor, new CornerRadii(10), Insets.Empty))

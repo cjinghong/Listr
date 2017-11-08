@@ -25,7 +25,7 @@ class TodoListViewController(
 	    private val tableView: TableView[TodoItem]
 	) {
 
-	private val flatRedColorHex = "D24D57"
+	private val flatRedColorHex = "#D24D57"
 	private var todoItemImportance: Importance = Importance.Low
 
 	// Setup
