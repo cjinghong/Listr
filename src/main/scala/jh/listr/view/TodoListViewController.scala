@@ -9,6 +9,8 @@ import jh.App
 import jh.listr.model.{Importance, ListrTheme, TodoItem}
 import jh.listr.model.Importance.Importance
 
+import scalafx.beans.value.ObservableValue
+import scalafx.scene.Node
 import scalafx.scene.control._
 import scalafxml.core.{FXMLLoader, NoDependencyResolver}
 import scalafxml.core.macros.sfxml
@@ -22,7 +24,7 @@ class TodoListViewController(
 	    private val highPriorityButton: Button,
 	    private val addButton: Button,
 
-	    private val tableView: TableView[TodoItem]
+	    private val listView: ListView[TodoItem]
 	) {
 
 	private val flatRedColorHex = "#D24D57"
@@ -35,8 +37,7 @@ class TodoListViewController(
 
 	// Setup the table view, along with its custom cell factory
 	private def setupTableView(): Unit = {
-		tableView.columnResizePolicy = TableView.ConstrainedResizePolicy
-		tableView.style =
+		listView.style =
 			"-fx-table-cell-border-color: transparent;" +
 			"-fx-focus-color: transparent;" +
 			"-fx-selection-bar: transparent; " +
@@ -44,7 +45,7 @@ class TodoListViewController(
 
 		// Detect when an item is selected
 		// TODO: - Shows popup dialog to edit the TodoItem
-		tableView.getSelectionModel.selectedItemProperty().addListener( { (item) =>
+		listView.getSelectionModel.selectedItemProperty().addListener( { (item) =>
 			if (item != null) {
 				val todoItem = item.asInstanceOf[ReadOnlyObjectPropertyBase[TodoItem]].getValue
 				println(todoItem.title.value + " selected")
@@ -52,33 +53,49 @@ class TodoListViewController(
 		})
 
 		if (App.todoItems != null) {
-			tableView.setItems(App.todoItems)
+			listView.setItems(App.todoItems)
 
-			val column = new TableColumn[TodoItem, TodoItem]()
-			tableView.columns.add(column)
+			listView.cellFactory = { (_) =>
+				val cell = new ListCell[TodoItem]() {
+					contentDisplay = ContentDisplay.GraphicOnly
+				}
 
-			column.sortable = false
-			column.text = ""
-			column.cellValueFactory = { _.value.asProperty }
-			column.cellFactory = { _ =>
-				val cell = new TableCell[TodoItem, TodoItem]()
-				val btn = new Button()
-
-				cell.contentDisplay = ContentDisplay.GraphicOnly
-				cell.item.onChange { (_, _, item) =>
-					if (item == null) {
+				cell.item.onChange({ (_: ObservableValue[TodoItem, TodoItem], _: TodoItem, newItem: TodoItem) =>
+					if (newItem == null) {
 						cell.setGraphic(null)
 					} else {
 						val resource = getClass.getResourceAsStream("TodoItemView.fxml")
 						val loader = new FXMLLoader(null, NoDependencyResolver)
 						loader.load(resource)
 						val controller = loader.getController[TodoItemController#Controller]()
-						controller.setTodoItem(item)
-						cell.setGraphic(loader.getRoot[AnchorPane])
+						controller.setTodoItem(newItem)
+						val node = loader.getRoot[AnchorPane]
+						cell.setGraphic(node)
 					}
-				}
+				})
 				cell
 			}
+
+//			listView.cellValueFactory = { _.value.asProperty }
+//			column.cellFactory = { _ =>
+//				val cell = new TableCell[TodoItem, TodoItem]()
+//				val btn = new Button()
+//
+//				cell.contentDisplay = ContentDisplay.GraphicOnly
+//				cell.item.onChange { (_, _, item) =>
+//					if (item == null) {
+//						cell.setGraphic(null)
+//					} else {
+//						val resource = getClass.getResourceAsStream("TodoItemView.fxml")
+//						val loader = new FXMLLoader(null, NoDependencyResolver)
+//						loader.load(resource)
+//						val controller = loader.getController[TodoItemController#Controller]()
+//						controller.setTodoItem(item)
+//						cell.setGraphic(loader.getRoot[AnchorPane])
+//					}
+//				}
+//				cell
+//			}
 		}
 	}
 
