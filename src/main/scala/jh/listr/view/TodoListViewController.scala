@@ -108,13 +108,14 @@ class TodoListViewController(
 		val title = titleTextField.text.value
 		val date = java.sql.Date.valueOf(datePicker.getValue)
 
-		if (title.isEmpty) {
+		val newItem = new TodoItem(title, date, todoItemImportance)
+
+		if (title.isEmpty || App.todoItems.contains(newItem)) {
 			// TODO: - Highlight the title text field (RED) OR show popup dialog
 		} else {
-			val newItem = new TodoItem(title, date, todoItemImportance)
 			App.todoItems.add(newItem)
 			App.todoItems.sort({ (a,b) =>
-				a.date.value.getTime < b.date.value.getTime
+				a.dueDate.value.getTime < b.dueDate.value.getTime
 			})
 		}
 	}

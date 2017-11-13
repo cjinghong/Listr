@@ -1,10 +1,8 @@
 package jh.listr.view
 
-import java.text.SimpleDateFormat
-
 import jh.App
 import jh.listr.model.TodoItem
-
+import jh.listr.util.DateUtil._
 import scalafx.beans.property.StringProperty
 import scalafx.geometry.Insets
 import scalafx.scene.control.CheckBox
@@ -41,14 +39,12 @@ class TodoItemController (
 		this.item = item
 		title.text <== item.title
 
-		val dateFormatter = new SimpleDateFormat("dd/MM/yyyy")
-
 		line.visible <== item.completed
 		checkBox.selected <==> item.completed
 
-		dateText.text = dateFormatter.format(item.date.value)
-		item.date.onChange({ (_, _, newValue) =>
-			dateText.text = dateFormatter.format(newValue)
+		dateText.text = item.dueDate.value.asString
+		item.dueDate.onChange({ (_, _, newValue) =>
+			dateText.text = newValue.asString
 		})
 
 		// Set the background color according to the completed state of the todoitem

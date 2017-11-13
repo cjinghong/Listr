@@ -19,13 +19,8 @@ import scalafxml.core.{FXMLLoader, NoDependencyResolver}
 
 object App extends JFXApp {
 
-	/**
-	  * The data as an observable list of TodoItems
-	  * */
+	/** The data as an observable list of TodoItems */
 	val todoItems = new ObservableBuffer[TodoItem]()
-
-
-
 	todoItems += new TodoItem("Do assignments!", new Date(1000), Importance.High)
 	todoItems += new TodoItem("Wash the floor", new Date(2000), Importance.High)
 	todoItems += new TodoItem("Kill myself", new Date(3000), Importance.High)
@@ -86,10 +81,10 @@ object App extends JFXApp {
 		}
 
 		incompleteTodoItems.sort({ (a, b) =>
-			a.date.value.getTime < b.date.value.getTime
+			a.dueDate.value.getTime < b.dueDate.value.getTime
 		})
 		completedTodoItems.sort({ (a, b) =>
-			a.date.value.getTime < b.date.value.getTime
+			a.dueDate.value.getTime < b.dueDate.value.getTime
 		})
 
 		todoItems.clear()
@@ -97,3 +92,9 @@ object App extends JFXApp {
 		todoItems ++= completedTodoItems
 	}
 }
+
+
+
+
+
+
