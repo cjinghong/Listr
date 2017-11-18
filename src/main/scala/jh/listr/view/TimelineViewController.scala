@@ -17,8 +17,8 @@ class TimelineViewController(
 	) {
 
 	hbox.children.clear()
-	for (item <- App.todoItems) {
 
+	for (item <- App.todoItems) {
 		// Load timeline card, and set its controller's todoitem.
 		val timelineCard = getClass.getResourceAsStream("TimelineCard.fxml")
 		val loader = new FXMLLoader(null, NoDependencyResolver)

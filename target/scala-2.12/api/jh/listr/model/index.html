@@ -131,11 +131,41 @@
                         </a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="trait" href="SwipeDownToggle.html" title="A trait that allows the Node to be swiped down to toggle a state of ON and OFF"></a>
+                        <a href="SwipeDownToggle.html" title="A trait that allows the Node to be swiped down to toggle a state of ON and OFF">
+                          SwipeDownToggle
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="TodoCircle.html" title="A Circle that represents a single TodoItem."></a>
+                        <a href="TodoCircle.html" title="A Circle that represents a single TodoItem.">
+                          TodoCircle
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="class" href="TodoItem.html" title="A class to represent a single To-do item in the todo-list."></a>
                         <a href="TodoItem.html" title="A class to represent a single To-do item in the todo-list.">
                           TodoItem
                         </a>
-                      </li><li name="jh.listr.view" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+                      </li><li name="jh.listr.util" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="util"></a><a id="util:util"></a>
+      <span class="permalink">
+      <a href="../../jh/listr/index.html#util" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../util/index.html">
+              <span class="name">util</span>
+            </a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="jh.listr">listr</a></dd></dl></div>
+    </li><li name="jh.listr.view" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="view"></a><a id="view:view"></a>
       <span class="permalink">
       <a href="../../jh/listr/index.html#view" title="Permalink">
@@ -216,7 +246,45 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="jh.listr.model.TodoItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="jh.listr.model.SwipeDownToggle" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SwipeDownToggleextendsAnyRef"></a><a id="SwipeDownToggle:SwipeDownToggle"></a>
+      <span class="permalink">
+      <a href="../../../jh/listr/model/index.html#SwipeDownToggleextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A trait that allows the Node to be swiped down to toggle a state of ON and OFF" href="SwipeDownToggle.html">
+              <span class="name">SwipeDownToggle</span>
+            </a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">A trait that allows the Node to be swiped down to toggle a state of ON and OFF</p><div class="fullcomment"><div class="comment cmt"><p>A trait that allows the Node to be swiped down to toggle a state of ON and OFF</p><p>Any Node that extends this trait will automatically get the ability to
+toggle on and off by swiping down on the node.</p></div></div>
+    </li><li name="jh.listr.model.TodoCircle" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TodoCircleextendsCirclewithSwipeDownToggle"></a><a id="TodoCircle:TodoCircle"></a>
+      <span class="permalink">
+      <a href="../../../jh/listr/model/index.html#TodoCircleextendsCirclewithSwipeDownToggle" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A Circle that represents a single TodoItem." href="TodoCircle.html">
+              <span class="name">TodoCircle</span>
+            </a><span class="result"> extends <span class="extype" name="scalafx.scene.shape.Circle">Circle</span> with <a href="SwipeDownToggle.html" class="extype" name="jh.listr.model.SwipeDownToggle">SwipeDownToggle</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A Circle that represents a single TodoItem.</p><div class="fullcomment"><div class="comment cmt"><p>A Circle that represents a single TodoItem.</p><p>The size of the circle varies based on the importance of the TodoItem
+</p></div></div>
+    </li><li name="jh.listr.model.TodoItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="TodoItemextendsAnyRef"></a><a id="TodoItem:TodoItem"></a>
       <span class="permalink">
       <a href="../../../jh/listr/model/index.html#TodoItemextendsAnyRef" title="Permalink">
@@ -263,7 +331,8 @@
       </span>
       
       <p class="shortcomment cmt">An object to represent the <i>importance</i> of a TodoItem.</p><div class="fullcomment"><div class="comment cmt"><p>An object to represent the <i>importance</i> of a TodoItem.</p><p>This is to make sure there is an exhaustive value of importance, which is:
-<code>Low</code>, <code>Medium</code>, and <code>High</code></p><p>For usage, please refer to <a href="TodoItem.html" class="extype" name="jh.listr.model.TodoItem">jh.listr.model.TodoItem</a></p></div></div>
+<code>Low</code>, <code>Medium</code>, and <code>High</code></p><p>For usage, please refer to <a href="TodoItem.html" class="extype" name="jh.listr.model.TodoItem">jh.listr.model.TodoItem</a>
+</p></div></div>
     </li>
               </ol>
             </div>

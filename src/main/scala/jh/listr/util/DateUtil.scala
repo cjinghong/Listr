@@ -1,8 +1,6 @@
 package jh.listr.util
 
 import java.text.{ParseException, SimpleDateFormat}
-import java.time.LocalDate
-import java.time.format.{DateTimeFormatter, DateTimeParseException}
 import java.util.Date;
 
 object DateUtil {
@@ -10,10 +8,9 @@ object DateUtil {
 	val DATE_FORMATTER = new SimpleDateFormat(DATE_PATTERN)
 
 	implicit class DateFormatter(val date: Date) {
-
 		/**
 		  * Returns the given date as a well formatted String. The above defined
-		  * {@link DateUtil#DATE_PATTERN} is used.
+		  * [[DATE_PATTERN]] is used.
 		  *
 		  * @param date the date to be returned as a string
 		  * @return formatted string
@@ -27,9 +24,8 @@ object DateUtil {
 	}
 
 	implicit class StringFormatter(val dateString: String) {
-		/**
-		  * Converts a String in the format of the defined {@link DateUtil#DATE_PATTERN}
-		  * to a {@link LocalDate} object.
+		/** Converts a String in the format of the defined [[DATE_PATTERN]]
+		  * to a [[Date]] object.
 		  *
 		  * Returns null if the String could not be converted.
 		  *

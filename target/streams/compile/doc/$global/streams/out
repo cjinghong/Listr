@@ -10,9 +10,17 @@
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/null/jre/lib/ext/jfxrt.jar:/Users/chanjinghong/.ivy2/cache/org.scalafx/scalafx_2.12/jars/scalafx_2.12-8.0.144-R12.jar:/Users/chanjinghong/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.3.jar:/Users/chanjinghong/.ivy2/cache/org.scalafx/scalafxml-core-sfx8_2.12/jars/scalafxml-core-sfx8_2.12-0.4.jar:/Users/chanjinghong/.ivy2/cache/org.scalafx/scalafxml-core-macros-sfx8_2.12/jars/scalafxml-core-macros-sfx8_2.12-0.4.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/App.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/model/Importance.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/model/SwipeDownToggle.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/model/TodoCircle.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/model/TodoItem.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/util/DateUtil.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/view/RootMenuController.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/view/TimelineCardController.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/view/TimelineViewController.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/view/TodoItemController.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/view/TodoListViewController.scala[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/util/DateUtil.scala:27:3: Could not find any member to link for "Date".[0m
+[0m[[0m[33mwarn[0m] [0m[0m		/** Converts a String in the format of the defined [[DATE_PATTERN]][0m
+[0m[[0m[33mwarn[0m] [0m[0m		^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
 [0m[[0m[0minfo[0m] [0m[0mMain Scala API documentation successful.[0m

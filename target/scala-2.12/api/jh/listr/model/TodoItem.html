@@ -133,6 +133,18 @@
                         </a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="trait" href="SwipeDownToggle.html" title="A trait that allows the Node to be swiped down to toggle a state of ON and OFF"></a>
+                        <a href="SwipeDownToggle.html" title="A trait that allows the Node to be swiped down to toggle a state of ON and OFF">
+                          SwipeDownToggle
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="TodoCircle.html" title="A Circle that represents a single TodoItem."></a>
+                        <a href="TodoCircle.html" title="A Circle that represents a single TodoItem.">
+                          TodoCircle
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="class" href="" title="A class to represent a single To-do item in the todo-list."></a>
                         <a href="" title="A class to represent a single To-do item in the todo-list.">
                           TodoItem
@@ -219,9 +231,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="jh.listr.model.TodoItem#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(titleS:String,dateD:java.time.LocalDate,importanceI:jh.listr.model.Importance.Importance):jh.listr.model.TodoItem"></a><a id="&lt;init&gt;:TodoItem"></a>
+      <a id="&lt;init&gt;(titleS:String,dueDateD:java.util.Date,importanceI:jh.listr.model.Importance.Importance):jh.listr.model.TodoItem"></a><a id="&lt;init&gt;:TodoItem"></a>
       <span class="permalink">
-      <a href="../../../jh/listr/model/TodoItem.html#&lt;init&gt;(titleS:String,dateD:java.time.LocalDate,importanceI:jh.listr.model.Importance.Importance):jh.listr.model.TodoItem" title="Permalink">
+      <a href="../../../jh/listr/model/TodoItem.html#&lt;init&gt;(titleS:String,dueDateD:java.util.Date,importanceI:jh.listr.model.Importance.Importance):jh.listr.model.TodoItem" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -230,12 +242,12 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">TodoItem</span><span class="params">(<span name="titleS">titleS: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dateD">dateD: <span class="extype" name="java.time.LocalDate">LocalDate</span></span>, <span name="importanceI">importanceI: <a href="Importance$.html#Importance=jh.listr.model.Importance.Value" class="extmbr" name="jh.listr.model.Importance.Importance">Importance</a> = <span class="symbol"><span class="name"><a href="Importance$.html">Importance.Low</a></span></span></span>)</span>
+        <span class="name">TodoItem</span><span class="params">(<span name="titleS">titleS: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dueDateD">dueDateD: <span class="extype" name="java.util.Date">Date</span></span>, <span name="importanceI">importanceI: <a href="Importance$.html#Importance=jh.listr.model.Importance.Value" class="extmbr" name="jh.listr.model.Importance.Importance">Importance</a> = <span class="symbol"><span class="name"><a href="Importance$.html">Importance.Low</a></span></span></span>)</span>
       </span>
       
       <p class="shortcomment cmt">Create a new <code>TodoItem</code> by specifying the <code>title</code>, <code>date</code>,
              and <code>importance</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new <code>TodoItem</code> by specifying the <code>title</code>, <code>date</code>,
-             and <code>importance</code>.</p></div><dl class="paramcmts block"><dt class="param">titleS</dt><dd class="cmt"><p>The TodoItem's title.</p></dd><dt class="param">dateD</dt><dd class="cmt"><p>The TodoItem's date, in epoch.</p></dd><dt class="param">importanceI</dt><dd class="cmt"><p>The level of importance for this particular TodoItem.
+             and <code>importance</code>.</p></div><dl class="paramcmts block"><dt class="param">titleS</dt><dd class="cmt"><p>The TodoItem's title.</p></dd><dt class="param">dueDateD</dt><dd class="cmt"><p>The TodoItem's due date.</p></dd><dt class="param">importanceI</dt><dd class="cmt"><p>The level of importance for this particular TodoItem.
                   Default value is <code>Importance.Low</code> unless changed.</p></dd></dl></div>
     </li></ol>
             </div>
@@ -365,10 +377,10 @@
       </span>
       
       
-    </li><li name="jh.listr.model.TodoItem#date" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="date:scalafx.beans.property.ObjectProperty[java.time.LocalDate]"></a><a id="date:ObjectProperty[LocalDate]"></a>
+    </li><li name="jh.listr.model.TodoItem#dueDate" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="dueDate:scalafx.beans.property.ObjectProperty[java.util.Date]"></a><a id="dueDate:ObjectProperty[Date]"></a>
       <span class="permalink">
-      <a href="../../../jh/listr/model/TodoItem.html#date:scalafx.beans.property.ObjectProperty[java.time.LocalDate]" title="Permalink">
+      <a href="../../../jh/listr/model/TodoItem.html#dueDate:scalafx.beans.property.ObjectProperty[java.util.Date]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -377,7 +389,7 @@
         <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">date</span><span class="result">: <span class="extype" name="scalafx.beans.property.ObjectProperty">ObjectProperty</span>[<span class="extype" name="java.time.LocalDate">LocalDate</span>]</span>
+        <span class="name">dueDate</span><span class="result">: <span class="extype" name="scalafx.beans.property.ObjectProperty">ObjectProperty</span>[<span class="extype" name="java.util.Date">Date</span>]</span>
       </span>
       
       
@@ -397,10 +409,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+    </li><li name="jh.listr.model.TodoItem#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(obj:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../jh/listr/model/TodoItem.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../jh/listr/model/TodoItem.html#equals(obj:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -409,10 +421,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">equals</span><span class="params">(<span name="obj">obj: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <p class="shortcomment cmt">Used to determine if 2 TodoItem is equal to each other.</p><div class="fullcomment"><div class="comment cmt"><p>Used to determine if 2 TodoItem is equal to each other.</p><p>Compares the <code>title</code>, <code>dueDate</code>, and <code>importance</code>
+to figure out if the TodoItem is the same.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="jh.listr.model.TodoItem">TodoItem</a> → AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">

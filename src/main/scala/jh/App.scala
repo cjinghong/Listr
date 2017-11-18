@@ -46,7 +46,8 @@ object App extends JFXApp {
 	// TodoListView is the first to be shown by default
 	showToDoList()
 
-	// Add new Item
+	// todo - Save the todo item here!
+	/** Adds a new TodoItem to the list. This also saves the TodoItem to the database. */
 	def addItem(newItem: TodoItem): Unit = {
 		todoItems.add(newItem)
 		todoItems.sort({ (a,b) =>

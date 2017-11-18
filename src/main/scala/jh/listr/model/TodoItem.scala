@@ -26,6 +26,11 @@ class TodoItem(titleS: String, dueDateD: Date, importanceI: Importance = Importa
 		ObjectProperty(this)
 	}
 
+	/** Used to determine if 2 TodoItem is equal to each other.
+	  *
+	  * Compares the `title`, `dueDate`, and `importance`
+	  * to figure out if the TodoItem is the same.
+	  */
 	override def equals(obj: scala.Any): Boolean = {
 		val anotherItem = obj.asInstanceOf[TodoItem]
 		if (anotherItem == null) { return false }

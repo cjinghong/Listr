@@ -12,9 +12,12 @@ class TimelineCardController(
     private val todoCircleBorderPane: BorderPane,
 	private val dateText: Text) {
 
-	// When a todoitem is set, updates card
-	var todoItem: TodoItem = null
+	private var todoItem: TodoItem = null
 
+	/** Populates TimelineCard with the given `TodoItem`
+	  *
+	  * @param item The TodoItem to be displayed in the TimelineCard
+	  */
 	def setItem(item: TodoItem): Unit = {
 		if (item != null) {
 			// Updates circle
