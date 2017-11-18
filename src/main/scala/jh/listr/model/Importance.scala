@@ -1,5 +1,4 @@
 package jh.listr.model
-
 /**
   * An object to represent the ''importance'' of a TodoItem.
   *
@@ -13,5 +12,5 @@ object Importance extends Enumeration {
 	type Importance = Value
 	val Low = Value(0)
 	val Medium = Value(1)
-	val High = Value(2)
+	val High = Value
 }

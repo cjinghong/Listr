@@ -1,11 +1,9 @@
 package jh.listr.model
-import java.time.LocalDate
-import java.util.{Calendar, Date}
+import java.util.{Date}
+
+import scalafx.beans.property.{BooleanProperty, ObjectProperty, StringProperty}
 
 import jh.listr.model.Importance.Importance
-
-import scalafx.beans.property.{BooleanProperty, IntegerProperty, ObjectProperty, StringProperty}
-import java.time.LocalDate;
 
 /**
   * A class to represent a single ``To-do item`` in the todo-list.

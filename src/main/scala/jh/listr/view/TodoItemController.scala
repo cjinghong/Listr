@@ -54,7 +54,7 @@ class TodoItemController (
 		item.completed.onChange({ (_, _, newValue) =>
 			// Re-sort items
 			// TODO: - Do we really need to re-sort the item here??
-//			App.sortTodoItems()
+			// App.sortTodoItems()
 			updateBackgroundState(newValue)
 		})
 	}

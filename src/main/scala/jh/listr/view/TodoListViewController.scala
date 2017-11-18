@@ -6,12 +6,14 @@ import javafx.beans.property.ReadOnlyObjectPropertyBase
 import javafx.scene.layout.{AnchorPane, BorderPane}
 
 import jh.App
-import jh.listr.model.{Importance, ListrTheme, TodoItem}
+import jh.listr.model.{Importance, TodoItem}
 import jh.listr.model.Importance.Importance
+import javafx.{scene => jfxs}
 
 import scalafx.beans.value.ObservableValue
-import scalafx.scene.Node
+import scalafx.scene.control.Alert.AlertType
 import scalafx.scene.control._
+import scalafx.stage.Modality
 import scalafxml.core.{FXMLLoader, NoDependencyResolver}
 import scalafxml.core.macros.sfxml
 
@@ -69,33 +71,12 @@ class TodoListViewController(
 						loader.load(resource)
 						val controller = loader.getController[TodoItemController#Controller]()
 						controller.setTodoItem(newItem)
-						val node = loader.getRoot[AnchorPane]
+						val node = loader.getRoot[jfxs.Parent]
 						cell.setGraphic(node)
 					}
 				})
 				cell
 			}
-
-//			listView.cellValueFactory = { _.value.asProperty }
-//			column.cellFactory = { _ =>
-//				val cell = new TableCell[TodoItem, TodoItem]()
-//				val btn = new Button()
-//
-//				cell.contentDisplay = ContentDisplay.GraphicOnly
-//				cell.item.onChange { (_, _, item) =>
-//					if (item == null) {
-//						cell.setGraphic(null)
-//					} else {
-//						val resource = getClass.getResourceAsStream("TodoItemView.fxml")
-//						val loader = new FXMLLoader(null, NoDependencyResolver)
-//						loader.load(resource)
-//						val controller = loader.getController[TodoItemController#Controller]()
-//						controller.setTodoItem(item)
-//						cell.setGraphic(loader.getRoot[AnchorPane])
-//					}
-//				}
-//				cell
-//			}
 		}
 	}
 
@@ -127,13 +108,12 @@ class TodoListViewController(
 
 		val newItem = new TodoItem(title, date, todoItemImportance)
 
-		if (title.isEmpty || App.todoItems.contains(newItem)) {
-			// TODO: - Highlight the title text field (RED) OR show popup dialog
+		if (title.isEmpty) {
+			App.showNoTitleError()
+		} else if (App.todoItems.contains(newItem)) {
+			App.showDuplicatingItemError(newItem)
 		} else {
-			App.todoItems.add(newItem)
-			App.todoItems.sort({ (a,b) =>
-				a.dueDate.value.getTime < b.dueDate.value.getTime
-			})
+			App.addItem(newItem)
 		}
 	}
 
