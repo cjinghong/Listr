@@ -1,34 +1,56 @@
 package jh.listr.model
 import Importance._
 
+import scalafx.scene.layout.StackPane
 import scalafx.scene.paint.Color
 import scalafx.scene.shape.Circle
+import scalafx.scene.text.{Font, Text, TextBoundsType}
 
-/** A Circle that represents a single TodoItem.
+/** A StackPane that includes a circle, and a text in the middle. This represents a single TodoItem
   *
-  * The size of the circle varies based on the importance of the TodoItem
+  * The size of the circle varies based on the importance of the TodoItem.
+  * The text will be centered in the circle.
   *
   *  @constructor create a new TodoCircle with the given todo item
   *  @param item the todo item
   */
-class TodoCircle(item: TodoItem) extends Circle with SwipeDownToggle {
+class TodoCircle(item: TodoItem) extends StackPane with SwipeDownToggle {
 
-	val lightBlueColor = Color(68.0/255.0, 108.0/255.0, 179.0/255.0, 0.8)
+	// Todo change this to follow template
+	// This is a lightblue color.
+	val circleColor = Color(68.0/255.0, 108.0/255.0, 179.0/255.0, 0.8)
+
+	// Set the initial state for the toggling on and off
+	toggleOnProperty.value = !item.completed.value
 
 	// If circle is "on" means item is not completed.
 	// Circle on means the circle is visible
 	// Circle off means the circle is semi-transparent
 	// When an item is completed, the circle becomes semi-transparent
-	item.completed <== !toggleOnProperty
+	toggleOnProperty.onChange({ (_, _, newValue) =>
+		item.completed.value = !newValue
+	})
 
+	// circle
+	val circle: Circle = Circle(0)
 	item.importance.value match {
 		case Low =>
-			radius = 50
+			circle.radius = 100
 		case Medium =>
-			radius = 70
+			circle.radius = 120
 		case High =>
-			radius = 100
+			circle.radius = 150
+	}
+	circle.fill = circleColor
+
+	// text
+	val text: Text = new Text() {
+		text <== item.title
+		font = Font(20)
+		fill = Color.White
+		boundsType = TextBoundsType.Visual
 	}
 
-	fill = lightBlueColor
+	// Adds circle and text to self
+	this.children.addAll(circle, text)
 }

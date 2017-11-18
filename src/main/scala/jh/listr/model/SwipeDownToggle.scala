@@ -24,10 +24,16 @@ trait SwipeDownToggle { this: Node =>
 	  * @example
 	  * You can bind to this property to observe when the toggle is on or off
 	  * {{{val state <== toggleOnProperty}}}
+	  *
+	  * Or you can set the value of toggleOnProperty to trigger an update in the UI
+	  * {{{toggleOnProperty.value = false}}}
 	  */
 	var toggleOnProperty = BooleanProperty(true)
+	toggleOnProperty.onChange({ (_, _, _) =>
+		returnToOriginalPosition(true)
+	})
 
-	private var maxOpacity = 1.0
+	private val MAX_OPACITY = 1.0
 	private val MIN_OPACITY = 0.5
 
 	/** The maximum Y translation that is allowed */
@@ -57,51 +63,56 @@ trait SwipeDownToggle { this: Node =>
 		if (newTranslateY >= 0 && newTranslateY <= MAX_Y_TRANSLATE) {
 			e.getSource.asInstanceOf[jfxs.Node].setTranslateY(newTranslateY)
 
-			val opacity = (1 - (Math.abs(offsetY) / (this.scene.value.getWidth / 2))) * maxOpacity
-
-			this.opacity =
-				if (opacity < MIN_OPACITY) MIN_OPACITY
-				else opacity
+			// Only animates opacity when its in the "ON" state.
+			if (toggleOnProperty.value) {
+				val opacity = 1 - (Math.abs(offsetY) / (this.scene.value.getWidth / 2))
+				this.opacity =
+					if (opacity < MIN_OPACITY) MIN_OPACITY
+					else opacity
+			}
 		}
 	}
 	this.onMouseReleased = (e: MouseEvent) => {
-		returnToOriginalPosition()
+		toggleOnProperty.value = !toggleOnProperty.value
 	}
 	this.onMouseDragExited = (e: MouseEvent) => {
-		returnToOriginalPosition()
+		toggleOnProperty.value = !toggleOnProperty.value
 	}
 
 	/** Returns the node back to its original position (the initial position when the mouse clicked) */
-	private def returnToOriginalPosition(): Unit = {
-
-		// Toggles
-		toggleOnProperty.value = !toggleOnProperty.value
-
+	private def returnToOriginalPosition(animated: Boolean): Unit = {
 		// If it should be toggled on, change max opacity to 1,
 		// else, change it to 0.5
-		if (toggleOnProperty.value) { maxOpacity = 1 }
-		else { maxOpacity = 0.5 }
-
+		var opacity = 0.0
+		if (toggleOnProperty.value) { opacity = MAX_OPACITY }
+		else { opacity = MIN_OPACITY }
 
 		// Only animate again when previous animation is completed.
 		if (translationComplete && fadeComplete) {
-			val translateTransition = new TranslateTransition(Duration(400), this)
-			translateTransition.toY = orgTranslateY
-			translateTransition.onFinished = { _ =>
-				translationComplete = true
-			}
-			translationComplete = false
-			translateTransition.play()
 
-			/** Fade transition to animate the bubble back to normal opacity */
-			val fadeTransition = new FadeTransition(Duration(400), this)
-			fadeTransition.fromValue = this.opacity.value
-			fadeTransition.toValue = maxOpacity
-			fadeTransition.onFinished = { _ =>
-				fadeComplete = true
-			}
-			fadeComplete = false
-			fadeTransition.play()
+			 if (animated) {
+
+				 val translateTransition = new TranslateTransition(Duration(400), this)
+				 translateTransition.toY = orgTranslateY
+				 translateTransition.onFinished = { _ =>
+					 translationComplete = true
+				 }
+				 translationComplete = false
+				 translateTransition.play()
+
+				 /** Fade transition to animate the bubble back to normal opacity */
+				 val fadeTransition = new FadeTransition(Duration(400), this)
+				 fadeTransition.fromValue = this.opacity.value
+				 fadeTransition.toValue = opacity
+				 fadeTransition.onFinished = { _ =>
+					 fadeComplete = true
+				 }
+				 fadeComplete = false
+				 fadeTransition.play()
+			 } else {
+				 this.translateY = orgTranslateY
+				 this.opacity = opacity
+			 }
 		}
 	}
 

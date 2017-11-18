@@ -27,6 +27,9 @@ object App extends JFXApp {
 	todoItems += new TodoItem("Kill myself", new Date(3000), Importance.High)
 	todoItems += new TodoItem("Something", new Date(4000), Importance.Low)
 
+
+	private var currentlyDisplayingView: String = ""
+
 	private val rootResource = getClass.getResourceAsStream("./listr/view/RootMenu.fxml")
 	private val loader = new FXMLLoader(null, NoDependencyResolver)
 	loader.load(rootResource)
@@ -61,23 +64,45 @@ object App extends JFXApp {
 
 	/** Displays the TodoListView */
 	def showToDoList(): Unit = {
-		val resource = getClass.getResourceAsStream("./listr/view/TodoListView.fxml")
-		val loader = new FXMLLoader(null, NoDependencyResolver)
-		loader.load(resource)
-		val todoListView = loader.getRoot[jfxs.Parent]
-		this.roots.setCenter(todoListView)
+		val identifier = "todolist"
+
+		// Only loads if it is not already showing
+		if (currentlyDisplayingView != identifier) {
+			val resource = getClass.getResourceAsStream("./listr/view/TodoListView.fxml")
+			val loader = new FXMLLoader(null, NoDependencyResolver)
+			loader.load(resource)
+			val todoListView = loader.getRoot[jfxs.Parent]
+
+			this.roots.setCenter(todoListView)
+			currentlyDisplayingView = identifier
+		}
 	}
 	/** Displays the TimelineView */
 	def showTimeline(): Unit = {
-		val resource = getClass.getResourceAsStream("./listr/view/TimelineView.fxml")
-		val loader = new FXMLLoader(null, NoDependencyResolver)
-		loader.load(resource)
-		val timelineView = loader.getRoot[jfxs.Parent]
-		this.roots.setCenter(timelineView)
+		val identifier = "timeline"
+
+		// Only loads if it is not already showing
+		if (currentlyDisplayingView != identifier) {
+			val resource = getClass.getResourceAsStream("./listr/view/TimelineView.fxml")
+			val loader = new FXMLLoader(null, NoDependencyResolver)
+			loader.load(resource)
+			val timelineView = loader.getRoot[jfxs.Parent]
+
+			this.roots.setCenter(timelineView)
+			currentlyDisplayingView = identifier
+		}
 	}
 	/** Displays the SettingsView */
 	def showSettings(): Unit = {
-		this.roots.setCenter(null)
+		val identifier = "settings"
+
+		// Only loads if it is not already showing
+		if (currentlyDisplayingView != identifier) {
+			val settingsView = null
+
+			this.roots.setCenter(settingsView)
+			currentlyDisplayingView = identifier
+		}
 	}
 
 	// -------------

@@ -12,9 +12,9 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="150.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.TimelineCardController">
    <children>
-      <VBox alignment="CENTER" layoutX="140.0" layoutY="145.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER" layoutX="140.0" layoutY="145.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <BorderPane fx:id="todoCircleBorderPane" prefHeight="200.0">
+            <BorderPane fx:id="todoCircleBorderPane" prefHeight="300.0">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -27,11 +27,12 @@
                   <Font size="20.0" />
                </font>
             </Text>
-            <Line endX="150.0" startX="-150.0">
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-            </Line>
+            <StackPane prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <Line endX="170.0" startX="-170.0" />
+                  <Line endY="5.0" startY="-5.0" />
+               </children>
+            </StackPane>
          </children>
       </VBox>
    </children>
