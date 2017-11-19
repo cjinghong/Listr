@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.TodoItemEditController">
+   <children>
+      <TextField fx:id="title" layoutX="19.0" layoutY="56.0" prefHeight="31.0" prefWidth="263.0" />
+      <DatePicker fx:id="datePicker" layoutX="19.0" layoutY="119.0" prefHeight="31.0" prefWidth="174.0" />
+       <HBox layoutX="19.0" layoutY="187.0" spacing="10.0" AnchorPane.leftAnchor="19.0" AnchorPane.topAnchor="187.0">
+           <children>
+               <Button fx:id="lowPriorityButton" layoutX="412.0" layoutY="20.0" mnemonicParsing="false" onAction="#setLowPriority" text="!" />
+               <Button fx:id="mediumPriorityButton" layoutX="435.0" layoutY="20.0" mnemonicParsing="false" onAction="#setMediumPriority" text="!!" />
+               <Button fx:id="highPriorityButton" layoutX="462.0" layoutY="20.0" mnemonicParsing="false" onAction="#setHighPriority" text="!!!" />
+           </children>
+       </HBox>
+      <Label layoutX="20.0" layoutY="39.0" text="Title" />
+      <Label layoutX="19.0" layoutY="102.0" text="Date" />
+      <Label layoutX="19.0" layoutY="170.0" text="Importance" />
+      <Button fx:id="okButton" layoutX="125.0" layoutY="261.0" mnemonicParsing="false" onAction="#handleOK" text="OK" />
+   </children>
+</AnchorPane>

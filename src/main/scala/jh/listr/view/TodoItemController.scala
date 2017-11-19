@@ -1,8 +1,8 @@
 package jh.listr.view
 
-import jh.App
 import jh.listr.model.TodoItem
 import jh.listr.util.DateUtil._
+
 import scalafx.beans.property.StringProperty
 import scalafx.geometry.Insets
 import scalafx.scene.control.CheckBox
@@ -23,7 +23,6 @@ class TodoItemController (
 
 	private var item: TodoItem = null
 	private val dateTextProperty = new StringProperty("")
-
 
 	// Resize line when the view is resized
 	line.width <== root.width * 0.9

@@ -1,21 +1,21 @@
 package jh
 
-import java.time.{Instant, LocalDate}
 import java.util.Date
 import javafx.scene.layout._
+import javafx.{scene => jfxs}
 
 import jh.listr.model.{Importance, TodoItem}
-import javafx.{scene => jfxs}
+import jh.listr.view.TodoItemEditController
 
 import scalafx.Includes._
 import scalafx.application.JFXApp
 import scalafx.application.JFXApp.PrimaryStage
 import scalafx.collections.ObservableBuffer
 import scalafx.scene.Scene
-import scalafx.scene.control.{Alert, Button, ButtonType}
 import scalafx.scene.control.Alert.AlertType
+import scalafx.scene.control.{Alert, ButtonType}
 import scalafx.scene.image.Image
-import scalafx.stage.Modality
+import scalafx.stage.{Modality, Stage}
 import scalafxml.core.{FXMLLoader, NoDependencyResolver}
 
 object App extends JFXApp {
@@ -26,7 +26,6 @@ object App extends JFXApp {
 	todoItems += new TodoItem("Wash the floor", new Date(2000), Importance.Medium)
 	todoItems += new TodoItem("Kill myself", new Date(3000), Importance.High)
 	todoItems += new TodoItem("Something", new Date(4000), Importance.Low)
-
 
 	private var currentlyDisplayingView: String = ""
 
@@ -131,7 +130,24 @@ object App extends JFXApp {
 		}
 	}
 
-
+  def showEditDialog(todoItem: TodoItem): Unit ={
+    val resource = getClass.getResourceAsStream("./listr/view/TodoItemEditDialog.fxml")
+    val loader = new FXMLLoader(null, NoDependencyResolver)
+    loader.load(resource);
+    val roots2  = loader.getRoot[jfxs.Parent]
+    val control = loader.getController[TodoItemEditController#Controller]
+    System.out.print("open")
+    val dialog = new Stage() {
+      initModality(Modality.ApplicationModal)
+      initOwner(stage)
+      scene = new Scene {
+        root = roots2
+      }
+    }
+    control.setTodoItem(todoItem)
+    control.dialogStage = dialog
+    dialog.showAndWait()
+  }
 
 
 //	/** Sorts the list of todoItems ascending by date, and group them by completed first, then incomplete  */
