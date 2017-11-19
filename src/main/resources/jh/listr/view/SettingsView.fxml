@@ -13,8 +13,11 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.SettingsViewController">
@@ -48,7 +51,7 @@
                                     <HBox spacing="15.0">
                                        <children>
                                           <TextField prefHeight="25.0" prefWidth="286.0" />
-                                          <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Browse" />
+                                          <Button fx:id="gn_browse" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Browse" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -59,20 +62,23 @@
                                     <HBox spacing="8.0">
                                        <children>
                                           <Label text="Delete Period" />
-                                          <HBox fx:id="gn_htoggle" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="35.0" style="-fx-border-style: solid inside; -fx-border-width: 1; -fx-border-radius: 12; -fx-border-color: silver;">
+                                          <Pane>
                                              <children>
-                                                <Button fx:id="gn_btoggle" minHeight="-Infinity" mnemonicParsing="false" prefHeight="16.0" prefWidth="15.0" style="-fx-background-radius: 12;" />
+                                                <Rectangle fx:id="gn_tog_rec" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="18.0" stroke="#0000005c" strokeType="INSIDE" width="40.0">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Rectangle>
+                                                <Circle fx:id="gn_tog_circle" centerX="10.0" centerY="9.0" fill="WHITE" radius="9.0" stroke="#0000006e" strokeType="INSIDE">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Circle>
                                              </children>
-                                             <cursor>
-                                                <Cursor fx:constant="HAND" />
-                                             </cursor>
-                                             <padding>
-                                                <Insets bottom="1.0" />
-                                             </padding>
-                                          </HBox>
+                                          </Pane>
                                        </children>
                                     </HBox>
-                                    <ChoiceBox fx:id="gn_del_preiod" prefWidth="150.0" />
+                                    <ChoiceBox fx:id="gn_del_period" disable="true" prefWidth="150.0" />
                                  </children>
                               </VBox>
                            </children>
@@ -138,7 +144,12 @@
                                  </padding>
                               </VBox>
                               <Separator layoutX="178.0" layoutY="99.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                              <Label layoutX="14.0" layoutY="105.0" text="Choose Font" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="110.0" />
+                              <VBox layoutY="110.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Choose Font" />
+                                    <ChoiceBox prefWidth="150.0" />
+                                 </children>
+                              </VBox>
                            </children>
                         </AnchorPane>
                      </children>
