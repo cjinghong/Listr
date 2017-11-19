@@ -26,7 +26,7 @@ object App extends JFXApp {
 	todoItems += new TodoItem("Wash the floor", new Date(2000), Importance.Medium)
 	todoItems += new TodoItem("Kill myself", new Date(3000), Importance.High)
 	todoItems += new TodoItem("Something", new Date(4000), Importance.Low)
-
+//	todoItems += new TodoItem("Do assignments! A duplicating TodoItem already exist. Are you sure you want to add it? A duplicating TodoItem already exist. Are you sure you want to add it?", new Date(1000), Importance.Low)
 
 	private var currentlyDisplayingView: String = ""
 
@@ -130,8 +130,6 @@ object App extends JFXApp {
 			case _ => println("Not adding item")
 		}
 	}
-
-
 
 
 //	/** Sorts the list of todoItems ascending by date, and group them by completed first, then incomplete  */

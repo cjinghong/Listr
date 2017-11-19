@@ -20,11 +20,18 @@ class TimelineCardController(
 	  */
 	def setItem(item: TodoItem): Unit = {
 		if (item != null) {
+			todoItem = item
+
 			// Updates circle
 			val todoCircle = new TodoCircle(item)
 			todoCircleBorderPane.setCenter(todoCircle)
 			// Updates date
 			dateText.text = item.dueDate.value.asString
+
+			// TODO: - Show edit dialog
+			todoCircleBorderPane.onMouseClicked = { _ =>
+				println("Todo circle clicked")
+			}
 		}
 	}
 

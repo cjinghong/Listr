@@ -48,6 +48,8 @@ class TodoCircle(item: TodoItem) extends StackPane with SwipeDownToggle {
 		text <== item.title
 		font = Font(20)
 		fill = Color.White
+
+		wrappingWidth <== circle.radius * 2 - 10
 		boundsType = TextBoundsType.Visual
 	}
 
