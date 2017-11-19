@@ -2,12 +2,12 @@ package jh.listr.view
 
 import java.time.LocalDate
 import java.util.Date
-import javafx.beans.property.ReadOnlyObjectPropertyBase
-import javafx.scene.layout.{AnchorPane, BorderPane}
 
 import jh.App
 import jh.listr.model.{Importance, TodoItem}
 import jh.listr.model.Importance.Importance
+import jh.listr.util.DateUtil._
+
 import javafx.{scene => jfxs}
 
 import scalafx.beans.value.ObservableValue
@@ -104,7 +104,7 @@ class TodoListViewController(
 	/** Adds and save the new TodoItem, only if there is a title */
 	def addTodoItem(): Unit = {
 		val title = titleTextField.text.value
-		val date = java.sql.Date.valueOf(datePicker.getValue)
+		val date = datePicker.getValue.toDate
 
 		val newItem = new TodoItem(title, date, todoItemImportance)
 

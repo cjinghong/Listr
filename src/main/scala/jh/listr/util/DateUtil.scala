@@ -1,6 +1,7 @@
 package jh.listr.util
 
 import java.text.{ParseException, SimpleDateFormat}
+import java.time.LocalDate
 import java.util.Date;
 
 object DateUtil {
@@ -20,6 +21,18 @@ object DateUtil {
 				return null;
 			}
 			return DATE_FORMATTER.format(date);
+		}
+	}
+
+	implicit class DateToLocalDate(val date: Date) {
+		def toLocalDate: LocalDate = {
+			new java.sql.Date(date.getTime).toLocalDate
+		}
+	}
+
+	implicit class LocalDateToDate(val localDate: LocalDate) {
+		def toDate: Date = {
+			java.sql.Date.valueOf(localDate)
 		}
 	}
 

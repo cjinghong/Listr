@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23092c67-c014-4d21-b769-8105e04f0105" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/jh/App$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/jh/App$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/TodoListViewController$Controller.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/jh/listr/view/TodoListViewController$Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/jh/listr/util/DateUtil.scala" afterPath="$PROJECT_DIR$/src/main/scala/jh/listr/util/DateUtil.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/jh/listr/view/TodoListViewController.scala" afterPath="$PROJECT_DIR$/src/main/scala/jh/listr/view/TodoListViewController.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,11 +26,24 @@
       <file leaf-file-name="TodoListViewController.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/view/TodoListViewController.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+            <state relative-caret-position="288">
+              <caret line="106" column="4" lean-forward="false" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="4" />
               <folding>
-                <element signature="e#2510#2710#0" expanded="false" />
-                <element signature="e#2929#3134#0" expanded="false" />
+                <element signature="e#23#49#0" expanded="true" />
+                <element signature="e#2435#2635#0" expanded="false" />
+                <element signature="e#2854#3059#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DateUtil.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/util/DateUtil.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding>
+                <element signature="e#23#74#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,7 +150,12 @@
       <find>toggleOnProperty</find>
       <find>selected</find>
       <find>selected&quot;</find>
+      <find>sq</find>
+      <find>sql</find>
     </findStrings>
+    <dirStrings>
+      <dir>/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/rt.jar!/java/sql</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -187,11 +203,11 @@
         <option value="$PROJECT_DIR$/src/main/scala/jh/listr/model/Importance.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/jh/listr/model/TodoItem.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/jh/listr/view/TimelineViewController.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/jh/listr/util/DateUtil.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/jh/listr/model/SwipeDownToggle.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/jh/listr/view/TimelineCardController.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/jh/listr/model/TodoCircle.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/jh/App.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/jh/listr/util/DateUtil.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/jh/listr/view/TodoListViewController.scala" />
       </list>
     </option>
@@ -566,15 +582,16 @@
       <workItem from="1510893438319" duration="6030000" />
       <workItem from="1510978068764" duration="7889000" />
       <workItem from="1510996331837" duration="6409000" />
-      <workItem from="1511074277194" duration="296000" />
+      <workItem from="1511074277194" duration="820000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97600000" />
+    <option name="totallyTimeSpent" value="98124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="963" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -585,7 +602,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30184332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30184332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41013825" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -836,13 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/util/DateUtil.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="25" column="60" lean-forward="true" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/model/TodoItem.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -958,13 +968,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/util/DateUtil.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="e#23#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/jh/listr/view/TodoListViewController.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+        <state relative-caret-position="288">
+          <caret line="106" column="4" lean-forward="false" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="4" />
           <folding>
-            <element signature="e#2510#2710#0" expanded="false" />
-            <element signature="e#2929#3134#0" expanded="false" />
+            <element signature="e#23#49#0" expanded="true" />
+            <element signature="e#2435#2635#0" expanded="false" />
+            <element signature="e#2854#3059#0" expanded="false" />
           </folding>
         </state>
       </provider>
