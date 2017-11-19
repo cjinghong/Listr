@@ -47,12 +47,6 @@ class TodoListViewController(
 
 		// Detect when an item is selected
 		// TODO: - Shows popup dialog to edit the TodoItem
-		listView.getSelectionModel.selectedItemProperty().addListener( { (item) =>
-			if (item != null) {
-				val todoItem = item.asInstanceOf[ReadOnlyObjectPropertyBase[TodoItem]].getValue
-				println(todoItem.title.value + " selected")
-			}
-		})
 
 		if (App.todoItems != null) {
 			listView.setItems(App.todoItems)
@@ -75,6 +69,12 @@ class TodoListViewController(
 						cell.setGraphic(node)
 					}
 				})
+
+				cell.onMouseClicked = { _ =>
+					val todoItem = cell.item.value
+					println(todoItem.title.value + " selected")
+				}
+
 				cell
 			}
 		}
