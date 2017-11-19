@@ -98,7 +98,10 @@ object App extends JFXApp {
 
 		// Only loads if it is not already showing
 		if (currentlyDisplayingView != identifier) {
-			val settingsView = null
+			val resource = getClass.getResourceAsStream("./listr/view/SettingsView.fxml")
+			val loader = new FXMLLoader(null, NoDependencyResolver)
+			loader.load(resource)
+			val settingsView = loader.getRoot[jfxs.Parent]
 
 			this.roots.setCenter(settingsView)
 			currentlyDisplayingView = identifier
