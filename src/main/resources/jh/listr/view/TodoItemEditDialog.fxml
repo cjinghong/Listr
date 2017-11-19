@@ -9,7 +9,7 @@
 <AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.TodoItemEditController">
    <children>
       <TextField fx:id="title" layoutX="19.0" layoutY="56.0" prefHeight="31.0" prefWidth="263.0" />
-      <DatePicker fx:id="datePicker" layoutX="19.0" layoutY="119.0" prefHeight="31.0" prefWidth="174.0" />
+      <DatePicker fx:id="datePicker" editable="false" layoutX="19.0" layoutY="119.0" prefHeight="31.0" prefWidth="174.0" />
        <HBox layoutX="19.0" layoutY="187.0" spacing="10.0" AnchorPane.leftAnchor="19.0" AnchorPane.topAnchor="187.0">
            <children>
                <Button fx:id="lowPriorityButton" layoutX="412.0" layoutY="20.0" mnemonicParsing="false" onAction="#setLowPriority" text="!" />
