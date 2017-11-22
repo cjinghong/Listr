@@ -72,7 +72,7 @@ class TodoListViewController(
 
 				cell.onMouseClicked = { _ =>
 					val todoItem = cell.item.value
-					println(todoItem.title.value + " selected")
+					App.showEditDialog(todoItem)
 				}
 
 				cell
@@ -84,19 +84,16 @@ class TodoListViewController(
 
 	/** Set the TodoItem's `importance` to low priority */
 	def setLowPriority(): Unit = {
-		println("Low priority item")
 		selectPriorityButton(lowPriorityButton)
 		todoItemImportance = Importance.Low
 	}
 	/** Set the TodoItem's `importance` to medium priority */
 	def setMediumPriority(): Unit = {
-		println("Medium priority item")
 		selectPriorityButton(mediumPriorityButton)
 		todoItemImportance = Importance.Medium
 	}
 	/** Set the TodoItem's `importance` to high priority */
 	def setHighPriority(): Unit = {
-		println("High priority item")
 		selectPriorityButton(highPriorityButton)
 		todoItemImportance = Importance.High
 	}

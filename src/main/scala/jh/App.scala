@@ -20,6 +20,11 @@ import scalafxml.core.{FXMLLoader, NoDependencyResolver}
 
 object App extends JFXApp {
 
+	// The id of the Node that is currently at the center
+	private val ID_TODOLIST = "todolist"
+	private val ID_TIMELINE = "timeline"
+	private val ID_SETTINGS = "settings"
+
 	/** The data as an observable list of TodoItems */
 	val todoItems = new ObservableBuffer[TodoItem]()
 	todoItems += new TodoItem("Do assignments!", new Date(1000), Importance.Low)
@@ -27,8 +32,6 @@ object App extends JFXApp {
 	todoItems += new TodoItem("Kill myself", new Date(3000), Importance.High)
 	todoItems += new TodoItem("Something", new Date(4000), Importance.Low)
 //	todoItems += new TodoItem("Do assignments! A duplicating TodoItem already exist. Are you sure you want to add it? A duplicating TodoItem already exist. Are you sure you want to add it?", new Date(1000), Importance.Low)
-
-	private var currentlyDisplayingView: String = ""
 
 	private val rootResource = getClass.getResourceAsStream("./listr/view/RootMenu.fxml")
 	private val loader = new FXMLLoader(null, NoDependencyResolver)
@@ -62,46 +65,87 @@ object App extends JFXApp {
 	// MAIN TABS
 	// ---------
 
-	/** Displays the TodoListView */
-	def showToDoList(): Unit = {
-		val identifier = "todolist"
+	/** Re-loads the current view. */
+	def refreshCurrentView(): Unit = {
+		val currentlyDisplayedView = this.roots.center.value.id.value
 
-		// Only loads if it is not already showing
-		if (currentlyDisplayingView != identifier) {
+		currentlyDisplayedView match {
+			case ID_TODOLIST => showToDoList(true)
+			case ID_TIMELINE => showTimeline(true)
+			case ID_SETTINGS => showSettings(true)
+		}
+	}
+
+	/** Displays the TodoListView
+	  * @param forced If the view is already presented, calling the function does nothing.
+	  *               This is a flag that determines if the view needs to be reloaded not matter what.
+	  *               Default value is `false`.
+	  */
+	def showToDoList(forced: Boolean = false): Unit = {
+
+		var currentDisplayedView = ""
+		Option(this.roots.center.value) match {
+			case None => println("There are NO view displayed yet")
+			case Some(node) => currentDisplayedView = node.id.value
+		}
+
+		// Only loads if it is not already showing, or when forced is true
+		if (currentDisplayedView != ID_TODOLIST || forced) {
 			val resource = getClass.getResourceAsStream("./listr/view/TodoListView.fxml")
 			val loader = new FXMLLoader(null, NoDependencyResolver)
 			loader.load(resource)
+
 			val todoListView = loader.getRoot[jfxs.Parent]
+			todoListView.id = ID_TODOLIST
 
 			this.roots.setCenter(todoListView)
-			currentlyDisplayingView = identifier
 		}
+
 	}
-	/** Displays the TimelineView */
-	def showTimeline(): Unit = {
-		val identifier = "timeline"
+	/** Displays the TimelineView
+	  * @param forced If the view is already presented, calling the function does nothing.
+	  *               This is a flag that determines if the view needs to be reloaded not matter what.
+	  *               Default value is `false`.
+	  */
+	def showTimeline(forced: Boolean = false): Unit = {
+		var currentDisplayedView = ""
+		Option(this.roots.center.value) match {
+			case None => println("There are NO view displayed yet")
+			case Some(node) => currentDisplayedView = node.id.value
+		}
 
 		// Only loads if it is not already showing
-		if (currentlyDisplayingView != identifier) {
+		if (currentDisplayedView != ID_TIMELINE || forced) {
 			val resource = getClass.getResourceAsStream("./listr/view/TimelineView.fxml")
 			val loader = new FXMLLoader(null, NoDependencyResolver)
 			loader.load(resource)
+
 			val timelineView = loader.getRoot[jfxs.Parent]
+			timelineView.id = ID_TIMELINE
 
 			this.roots.setCenter(timelineView)
-			currentlyDisplayingView = identifier
 		}
 	}
-	/** Displays the SettingsView */
-	def showSettings(): Unit = {
-		val identifier = "settings"
+	/** Displays the SettingsView
+	  *
+	  * @param forced If the view is already presented, calling the function does nothing.
+	  *               This is a flag that determines if the view needs to be reloaded not matter what.
+	  *               Default value is `false`.
+	  */
+	def showSettings(forced: Boolean = false): Unit = {
+		var currentDisplayedView = ""
+		Option(this.roots.center.value) match {
+			case None => println("There are NO view displayed yet")
+			case Some(node) => currentDisplayedView = node.id.value
+		}
 
 		// Only loads if it is not already showing
-		if (currentlyDisplayingView != identifier) {
+		if (currentDisplayedView != ID_SETTINGS || forced) {
+
 			val settingsView = null
+			// TODO: - Set id of settings view
 
 			this.roots.setCenter(settingsView)
-			currentlyDisplayingView = identifier
 		}
 	}
 
@@ -137,7 +181,6 @@ object App extends JFXApp {
     loader.load(resource);
     val roots2  = loader.getRoot[jfxs.Parent]
     val control = loader.getController[TodoItemEditController#Controller]
-    System.out.print("open")
     val dialog = new Stage() {
       initModality(Modality.ApplicationModal)
       initOwner(stage)

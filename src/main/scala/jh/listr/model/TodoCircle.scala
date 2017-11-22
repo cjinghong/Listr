@@ -41,6 +41,19 @@ class TodoCircle(item: TodoItem) extends StackPane with SwipeDownToggle {
 		case High =>
 			circle.radius = 150
 	}
+
+	// On change
+	item.importance.onChange({ (_, _, newValue) =>
+		newValue match {
+			case Low =>
+				circle.radius = 100
+			case Medium =>
+				circle.radius = 120
+			case High =>
+				circle.radius = 150
+		}
+	})
+
 	circle.fill = circleColor
 
 	// text
