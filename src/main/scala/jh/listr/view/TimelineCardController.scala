@@ -22,8 +22,10 @@ class TimelineCardController(
 		val todoCircle = new TodoCircle(item)
 
 		// Shows edit dialog when mouse clicked
-		todoCircle.onMouseClicked = { _ =>
-			App.showEditDialog(item)
+		todoCircle.onMouseClicked = { mouseEvent =>
+			if (mouseEvent.getClickCount >= 2) {
+				App.showEditDialog(item)
+			}
 		}
 
 		todoCircleBorderPane.setCenter(todoCircle)
