@@ -33,6 +33,10 @@ object App extends JFXApp {
 	todoItems += new TodoItem("Something", new Date(4000), Importance.Low)
 	//	todoItems += new TodoItem("Do assignments! A duplicating TodoItem already exist. Are you sure you want to add it? A duplicating TodoItem already exist. Are you sure you want to add it?", new Date(1000), Importance.Low)
 
+
+	private var currentlyDisplayingView: String = ""
+	private val cssResource = getClass.getResource("./listr/view/style.css")
+
 	private val rootResource = getClass.getResourceAsStream("./listr/view/RootMenu.fxml")
 	private val loader = new FXMLLoader(null, NoDependencyResolver)
 	loader.load(rootResource)
@@ -42,7 +46,11 @@ object App extends JFXApp {
 		minWidth = 700
 		minHeight = 300
 		title = "Listr"
-		scene = new Scene(roots)
+		scene = new Scene {
+			stylesheets ++= List(cssResource.toExternalForm)
+			root = roots
+
+		}
 		resizable = true
 	}
 
