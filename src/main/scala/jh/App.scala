@@ -29,6 +29,7 @@ object App extends JFXApp {
 
 
 	private var currentlyDisplayingView: String = ""
+	private val cssResource = getClass.getResource("./listr/view/style.css")
 
 	private val rootResource = getClass.getResourceAsStream("./listr/view/RootMenu.fxml")
 	private val loader = new FXMLLoader(null, NoDependencyResolver)
@@ -39,7 +40,11 @@ object App extends JFXApp {
 		minWidth = 700
 		minHeight = 300
 		title = "Listr"
-		scene = new Scene(roots)
+		scene = new Scene {
+			stylesheets ++= List(cssResource.toExternalForm)
+			root = roots
+
+		}
 		resizable = true
 	}
 
