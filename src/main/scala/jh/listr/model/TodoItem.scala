@@ -22,6 +22,10 @@ class TodoItem(titleS: String, dueDateD: Date, importanceI: Importance = Importa
 	var importance: ObjectProperty[Importance.Value] = ObjectProperty(importanceI)
 	var completed: BooleanProperty = BooleanProperty(false)
 
+	def this(titleS: String) {
+		this(titleS, new Date(), Importance.Low)
+	}
+
 	def asProperty(): ObjectProperty[TodoItem] = {
 		ObjectProperty(this)
 	}
@@ -31,6 +35,7 @@ class TodoItem(titleS: String, dueDateD: Date, importanceI: Importance = Importa
 	  * Compares the `title`, `dueDate`, and `importance`
 	  * to figure out if the TodoItem is the same.
 	  */
+
 	override def equals(obj: scala.Any): Boolean = {
 		val anotherItem = obj.asInstanceOf[TodoItem]
 		if (anotherItem == null) { return false }

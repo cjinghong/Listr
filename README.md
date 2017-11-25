@@ -23,13 +23,13 @@ There are 3 main screens for this application:
 
 ### Application of Concepts in Application
 
-* A **_Has-A_** relationship is implemented in our application by containing a reference to an object inside another object. An example of this is when a **TodoItem** is contained inside the entry point of the application, **App**.
-* An **_Is-A_** relationship is implemented in our application by implementing the use of inheritance. An example of this is when an **Importance** object extends **Enumeration**.
-* **_Inheritance_** is implemented in the class **TodoCircle**. **TodoCircle** extends the Object **Circle**.
+* A **_Has-A_** relationship is implemented in our application by containing a reference to an object inside another object. An example of this is when a **TodoCircle** is contained inside a **TimelineCardController**.
+* An **_Is-A_** relationship is implemented in our application by implementing the use of inheritance. An example of this is when an **TodoCircle** object extends **StackPane**.
+* **_Inheritance_** is implemented in the class **TodoCircle**. **TodoCircle** extends the class **StackPane**.
 * **_Composition_** is implemented in object **App**. An example of this is that the **App** object contains a **RootMenuController**, and they cannot outlive the **App** object, which means that the **RootMenuController** class cannot outlive the **App** object.
-* **_Method Overriding_** is implemented in the class **TodoItem**. An example of this is that the implementation of the _equals_ method of the **Object** object is overridden by that inside the **TodoItem** class.
-* **_Polymorphism_** is implemented in the class **TodoItem**. In this case, _dynamic polymorphism_ is implemented. An example of this is when _method overriding_ is used. This is shown when the _equals_ method of the **Object** object is overridden by the **TodoItem** class.
-* **_Encapsulation_** is implemented in the **TodoListViewController**. An example is **TodoListViewController** contains the private variable **titleTextField**.
+* **_Method Overriding_** is implemented in the class **TodoItem**. An example of this is that the implementation of the _equals_ method of the **Object** class is overridden by that inside the **TodoItem** class, to compare between 2 TodoItems.
+* **_Polymorphism_** is implemented in the class **TodoItem**. _Method overloading_ is used in the constructor to enable the **TodoItem** to be initialized with different parameters. _Method overriding_ is used when the _equals_ method of the **Object** class is overridden by the **TodoItem** class. 
+* **_Encapsulation_** is implemented in the **TodoListViewController**. **TodoListViewController** contains the private variables such as **titleTextField** and **datePicker**, which ensures that nothing else outside of the class can make changes to it.
 * **_Abstract Classes_** are not implemented inside our application.
 * **_Object Casting_** is implemented in the **TodoItem** class. For example, the _obj_ variable inside the _equals()_ method is cast to an instance of _TodoItem_.
 
@@ -42,13 +42,13 @@ There are 3 main screens for this application:
 
 The first strength of our application is the modularization. Components such as controllers are handled by their very own files, and data models are also handled by a different files. The second strength of our application is the clean GUI. The GUI only contains the essentials, and stuff such as the settings icon are located at the left part of the screen.
 
-In my opinion, the weakness of our application is the presence of code redundancy. For example, the setting of priority inside **TodoListViewController** is handled by three methods, _setLowPriority_, _setMediumPriority_, and _setHighPriority_. This can be improved by using only one method to set the priority of a **TodoItem**.
+The weakness of our application is the presence of code redundancy. For example, the setting of priority inside **TodoListViewController** is handled by three methods, _setLowPriority_, _setMediumPriority_, and _setHighPriority_, one for each button. It is best to only use 1 method to set the priority of a **TodoItem**, by connecting all 3 buttons to the same method. Another weakness is the inconsistency when it comes to binding properties to UI components. Some properties are binded both ways, and have unexpected behaviour. Our temporary fix is to just use the _onChange()_ callback on the property. But this becomes a consistency problem, because we ended up having a mixture of binding (<==>) and _onChange()_ all over the place.
 
 ### Members Contribution
 
-* TEOH ZHAN TAO (16.67%)
-* CHAN JING HONG (16.67%)
-* SHUM KA POH (16.67%)
-* MARK ANTHONY MIDIN (16.67%)
-* WONG KENG SAM (16.67%)
-* DARIUS?? (16.67%)
+* CHAN JING HONG (20%)
+* MARK ANTHONY MIDIN (17%)
+* TEOH ZHAN TAO (17%)
+* SHUM KA POH (17%)
+* DARIUS LAW HONG SHENG (17%)
+* WONG KENG SAM (12%)
