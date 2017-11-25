@@ -141,6 +141,12 @@ class SettingsViewController(
     }
   }
 
+  /**Reset settings to last user default
+    *
+    * @param tab condition to set values to default if user click cancel
+    *            0 == General Tab save buttons
+    *            1 == Appearance Tab save buttons
+    */
   private def cancelSettings(tab: Int): Unit = {
     if (tab == 0) {
       toggle = !tempToggle
@@ -170,6 +176,7 @@ class SettingsViewController(
     } else {
       //saves user selected font
       App.ap_font = ap_font.getSelectionModel.getSelectedIndex
+      changeFont(ap_font.getSelectionModel.getSelectedItem)
       //hides the save buttons
       ap_hbox.visible = false
     }
@@ -200,7 +207,14 @@ class SettingsViewController(
     }
   }
 
-  ap_font
+  /**Change main app font
+    *
+    * @param font receives font family in the form of string
+    */
+  private def changeFont(font: String): Unit = {
+    App.stage.getScene.getRoot.setStyle(s"-fx-font-family: $font")
+  }
+
   //everytime user selects or changes the delete period, call showSave() to display save buttons
   gn_del_period.valueProperty().onChange(showSave(0))
   //everytime user selects or changes the font, call showSave() to display save buttons
