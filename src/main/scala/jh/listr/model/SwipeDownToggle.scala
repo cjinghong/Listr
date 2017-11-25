@@ -1,5 +1,7 @@
 package jh.listr.model
 
+import scalafx.animation.Interpolator
+
 import scalafx.animation.{FadeTransition, TranslateTransition}
 import scalafx.scene.Node
 import scalafx.util.Duration
@@ -11,10 +13,11 @@ import scalafx.beans.property.BooleanProperty
 /** A trait that allows the Node to be swiped down to toggle a state of ON and OFF
   *
   * Any Node that extends this trait will automatically get the ability to
-  * toggle on and off by swiping down on the node.
+  * toggle on and off by "swiping down" (Click and hold the cursor, then drag down) on the node.
   *
   */
-trait SwipeDownToggle { this: Node =>
+trait SwipeDownToggle {
+	this: Node =>
 
 	/** Determines if the node is in the toggle state ON or OFF.
 	  *
@@ -28,8 +31,8 @@ trait SwipeDownToggle { this: Node =>
 	  * Or you can set the value of toggleOnProperty to trigger an update in the UI
 	  * {{{toggleOnProperty.value = false}}}
 	  */
-	var toggleOnProperty = BooleanProperty(true)
-	toggleOnProperty.onChange({ (_, _, _) =>
+	var toggledOn = BooleanProperty(true)
+	toggledOn.onChange({ (_, _, _) =>
 		returnToOriginalPosition()
 	})
 
@@ -65,7 +68,7 @@ trait SwipeDownToggle { this: Node =>
 			e.getSource.asInstanceOf[jfxs.Node].setTranslateY(newTranslateY)
 
 			// Only animates opacity when its in the "ON" state.
-			if (toggleOnProperty.value) {
+			if (toggledOn.value) {
 				val opacity = 1 - (Math.abs(offsetY) / (this.scene.value.getWidth / 2))
 				this.opacity =
 					if (opacity < MIN_OPACITY) MIN_OPACITY
@@ -78,7 +81,7 @@ trait SwipeDownToggle { this: Node =>
 		val offsetY = e.getSceneY - orgSceneY
 		val newTranslateY = orgTranslateY + offsetY
 		if (newTranslateY >= MAX_Y_TRANSLATE) {
-			toggleOnProperty.value = !toggleOnProperty.value
+			toggledOn.value = !toggledOn.value
 		} else {
 			returnToOriginalPosition()
 		}
@@ -88,7 +91,7 @@ trait SwipeDownToggle { this: Node =>
 		val offsetY = e.getSceneY - orgSceneY
 		val newTranslateY = orgTranslateY + offsetY
 		if (newTranslateY >= MAX_Y_TRANSLATE) {
-			toggleOnProperty.value = !toggleOnProperty.value
+			toggledOn.value = !toggledOn.value
 		} else {
 			returnToOriginalPosition()
 		}
@@ -99,28 +102,38 @@ trait SwipeDownToggle { this: Node =>
 		// If it should be toggled on, change max opacity to 1,
 		// else, change it to 0.5
 		var opacity = 0.0
-		if (toggleOnProperty.value) { opacity = MAX_OPACITY }
-		else { opacity = MIN_OPACITY }
+		if (toggledOn.value) {
+			opacity = MAX_OPACITY
+		}
+		else {
+			opacity = MIN_OPACITY
+		}
 
 		// Only animate again when previous animation is completed.
 		if (translationComplete && fadeComplete) {
-			 val translateTransition = new TranslateTransition(Duration(400), this)
-			 translateTransition.toY = orgTranslateY
-			 translateTransition.onFinished = { _ =>
-				 translationComplete = true
-			 }
-			 translationComplete = false
-			 translateTransition.play()
 
-			 /** Fade transition to animate the bubble back to normal opacity */
-			 val fadeTransition = new FadeTransition(Duration(400), this)
-			 fadeTransition.fromValue = this.opacity.value
-			 fadeTransition.toValue = opacity
-			 fadeTransition.onFinished = { _ =>
-				 fadeComplete = true
-			 }
-			 fadeComplete = false
-			 fadeTransition.play()
+			val duration = Duration(200)
+			val interpolator = Interpolator.EaseOut
+
+			val translateTransition = new TranslateTransition(duration, this)
+			translateTransition.interpolator = interpolator
+			translateTransition.toY = orgTranslateY
+			translateTransition.onFinished = { _ =>
+				translationComplete = true
+			}
+			translationComplete = false
+			translateTransition.play()
+
+			/** Fade transition to animate the bubble back to normal opacity */
+			val fadeTransition = new FadeTransition(duration, this)
+			fadeTransition.interpolator = interpolator
+			fadeTransition.fromValue = this.opacity.value
+			fadeTransition.toValue = opacity
+			fadeTransition.onFinished = { _ =>
+				fadeComplete = true
+			}
+			fadeComplete = false
+			fadeTransition.play()
 		}
 	}
 

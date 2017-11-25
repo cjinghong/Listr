@@ -31,7 +31,7 @@ object App extends JFXApp {
 	todoItems += new TodoItem("Wash the floor", new Date(2000), Importance.Medium)
 	todoItems += new TodoItem("Kill myself", new Date(3000), Importance.High)
 	todoItems += new TodoItem("Something", new Date(4000), Importance.Low)
-//	todoItems += new TodoItem("Do assignments! A duplicating TodoItem already exist. Are you sure you want to add it? A duplicating TodoItem already exist. Are you sure you want to add it?", new Date(1000), Importance.Low)
+	//	todoItems += new TodoItem("Do assignments! A duplicating TodoItem already exist. Are you sure you want to add it? A duplicating TodoItem already exist. Are you sure you want to add it?", new Date(1000), Importance.Low)
 
 	private val rootResource = getClass.getResourceAsStream("./listr/view/RootMenu.fxml")
 	private val loader = new FXMLLoader(null, NoDependencyResolver)
@@ -56,7 +56,7 @@ object App extends JFXApp {
 	/** Adds a new TodoItem to the list. This also saves the TodoItem to the database. */
 	def addItem(newItem: TodoItem): Unit = {
 		todoItems.add(newItem)
-		todoItems.sort({ (a,b) =>
+		todoItems.sort({ (a, b) =>
 			a.dueDate.value.getTime < b.dueDate.value.getTime
 		})
 	}
@@ -77,6 +77,7 @@ object App extends JFXApp {
 	}
 
 	/** Displays the TodoListView
+	  *
 	  * @param forced If the view is already presented, calling the function does nothing.
 	  *               This is a flag that determines if the view needs to be reloaded not matter what.
 	  *               Default value is `false`.
@@ -102,7 +103,9 @@ object App extends JFXApp {
 		}
 
 	}
+
 	/** Displays the TimelineView
+	  *
 	  * @param forced If the view is already presented, calling the function does nothing.
 	  *               This is a flag that determines if the view needs to be reloaded not matter what.
 	  *               Default value is `false`.
@@ -126,6 +129,7 @@ object App extends JFXApp {
 			this.roots.setCenter(timelineView)
 		}
 	}
+
 	/** Displays the SettingsView
 	  *
 	  * @param forced If the view is already presented, calling the function does nothing.
@@ -155,7 +159,7 @@ object App extends JFXApp {
 
 	/** Show a popup dialog for when the title is empty */
 	def showNoTitleError(): Unit = {
-		new Alert(AlertType.Warning, "Please enter a title."){
+		new Alert(AlertType.Warning, "Please enter a title.") {
 			headerText = "Empty title"
 			initOwner(stage)
 			initModality(Modality.ApplicationModal)
@@ -164,7 +168,7 @@ object App extends JFXApp {
 
 	/** Show a confirmation popup dialog for when there a duplicating TodoItem already existed. */
 	def showDuplicatingItemError(item: TodoItem): Unit = {
-		val result = new Alert(AlertType.Confirmation, "A duplicating TodoItem already exist. Are you sure you want to add it?"){
+		val result = new Alert(AlertType.Confirmation, "A duplicating TodoItem already exist. Are you sure you want to add it?") {
 			headerText = "Item exists"
 			initOwner(stage)
 			initModality(Modality.ApplicationModal)
@@ -175,45 +179,45 @@ object App extends JFXApp {
 		}
 	}
 
-  def showEditDialog(todoItem: TodoItem): Unit ={
-    val resource = getClass.getResourceAsStream("./listr/view/TodoItemEditDialog.fxml")
-    val loader = new FXMLLoader(null, NoDependencyResolver)
-    loader.load(resource);
-    val roots2  = loader.getRoot[jfxs.Parent]
-    val control = loader.getController[TodoItemEditController#Controller]
-    val dialog = new Stage() {
-      initModality(Modality.ApplicationModal)
-      initOwner(stage)
-      scene = new Scene {
-        root = roots2
-      }
-    }
-    control.setTodoItem(todoItem)
-    control.dialogStage = dialog
-    dialog.showAndWait()
-  }
+	def showEditDialog(todoItem: TodoItem): Unit = {
+		val resource = getClass.getResourceAsStream("./listr/view/TodoItemEditDialog.fxml")
+		val loader = new FXMLLoader(null, NoDependencyResolver)
+		loader.load(resource);
+		val roots2 = loader.getRoot[jfxs.Parent]
+		val control = loader.getController[TodoItemEditController#Controller]
+		val dialog = new Stage() {
+			initModality(Modality.ApplicationModal)
+			initOwner(stage)
+			scene = new Scene {
+				root = roots2
+			}
+		}
+		control.setTodoItem(todoItem)
+		control.dialogStage = dialog
+		dialog.showAndWait()
+	}
 
-//	/** Sorts the list of todoItems ascending by date, and group them by completed first, then incomplete  */
-//	def sortTodoItems(): Unit = {
-//		var incompleteTodoItems = new ObservableBuffer[TodoItem]()
-//		var completedTodoItems = new ObservableBuffer[TodoItem]()
-//
-//		for (item <- todoItems) {
-//			if (item.completed.value) completedTodoItems.add(item)
-//			else incompleteTodoItems.add(item)
-//		}
-//
-//		incompleteTodoItems.sort({ (a, b) =>
-//			a.dueDate.value.getTime < b.dueDate.value.getTime
-//		})
-//		completedTodoItems.sort({ (a, b) =>
-//			a.dueDate.value.getTime < b.dueDate.value.getTime
-//		})
-//
-//		todoItems.clear()
-//		todoItems ++= incompleteTodoItems
-//		todoItems ++= completedTodoItems
-//	}
+	//	/** Sorts the list of todoItems ascending by date, and group them by completed first, then incomplete  */
+	//	def sortTodoItems(): Unit = {
+	//		var incompleteTodoItems = new ObservableBuffer[TodoItem]()
+	//		var completedTodoItems = new ObservableBuffer[TodoItem]()
+	//
+	//		for (item <- todoItems) {
+	//			if (item.completed.value) completedTodoItems.add(item)
+	//			else incompleteTodoItems.add(item)
+	//		}
+	//
+	//		incompleteTodoItems.sort({ (a, b) =>
+	//			a.dueDate.value.getTime < b.dueDate.value.getTime
+	//		})
+	//		completedTodoItems.sort({ (a, b) =>
+	//			a.dueDate.value.getTime < b.dueDate.value.getTime
+	//		})
+	//
+	//		todoItems.clear()
+	//		todoItems ++= incompleteTodoItems
+	//		todoItems ++= completedTodoItems
+	//	}
 }
 
 

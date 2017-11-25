@@ -6,10 +6,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane minHeight="250.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.TodoItemEditController">
+<AnchorPane minHeight="250.0" minWidth="300.0" prefHeight="350.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.TodoItemEditController">
    <children>
-      <TextField fx:id="title" layoutX="19.0" layoutY="45.0" prefHeight="31.0" prefWidth="263.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="40.0" />
-      <DatePicker fx:id="datePicker" editable="false" layoutX="19.0" layoutY="119.0" prefHeight="31.0" prefWidth="174.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="110.0" />
+      <TextField fx:id="title" layoutX="67.0" layoutY="37.0" prefHeight="31.0" prefWidth="263.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="37.0" />
+      <DatePicker fx:id="datePicker" editable="false" layoutX="19.0" layoutY="119.0" prefHeight="31.0" prefWidth="310.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="110.0" />
        <HBox layoutX="19.0" layoutY="187.0" spacing="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="180.0">
            <children>
                <Button fx:id="lowPriorityButton" layoutX="412.0" layoutY="20.0" mnemonicParsing="false" onAction="#setLowPriority" text="!" />
@@ -20,6 +20,7 @@
       <Label layoutX="20.0" layoutY="39.0" text="Title" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
       <Label layoutX="19.0" layoutY="89.0" text="Date" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="90.0" />
       <Label layoutX="20.0" layoutY="161.0" text="Importance" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="160.0" />
-      <Button fx:id="okButton" alignment="CENTER" contentDisplay="CENTER" layoutX="175.0" layoutY="265.0" mnemonicParsing="false" onAction="#handleOK" text="OK" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Button fx:id="okButton" alignment="CENTER" contentDisplay="CENTER" layoutX="175.0" layoutY="265.0" mnemonicParsing="false" onAction="#handleOK" text="Save" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="121.0" layoutY="230.0" mnemonicParsing="false" onAction="#handleDelete" style="-fx-background-color: #D24D57;" text="Delete" textFill="WHITE" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
    </children>
 </AnchorPane>

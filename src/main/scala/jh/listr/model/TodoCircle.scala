@@ -21,13 +21,13 @@ class TodoCircle(item: TodoItem) extends StackPane with SwipeDownToggle {
 	val circleColor = Color(68.0/255.0, 108.0/255.0, 179.0/255.0, 0.8)
 
 	// Set the initial state for the toggling on and off
-	toggleOnProperty.value = !item.completed.value
+	toggledOn.value = !item.completed.value
 
 	// If circle is "on" means item is not completed.
 	// Circle on means the circle is visible
 	// Circle off means the circle is semi-transparent
 	// When an item is completed, the circle becomes semi-transparent
-	toggleOnProperty.onChange({ (_, _, newValue) =>
+	toggledOn.onChange({ (_, _, newValue) =>
 		item.completed.value = !newValue
 	})
 

@@ -1,8 +1,9 @@
 package jh.listr.model
-import java.util.{Date}
+import java.util.Date
+
+import jh.App
 
 import scalafx.beans.property.{BooleanProperty, ObjectProperty, StringProperty}
-
 import jh.listr.model.Importance.Importance
 
 /**
@@ -22,13 +23,28 @@ class TodoItem(titleS: String, dueDateD: Date, importanceI: Importance = Importa
 	var importance: ObjectProperty[Importance.Value] = ObjectProperty(importanceI)
 	var completed: BooleanProperty = BooleanProperty(false)
 
-	def this(titleS: String) {
+//	completed.onChange({ (_, _, newVal) =>
+//		if (newVal) {
+//			delete()
+//		}
+//	})
+
+	def this(titleS: String, importance: Importance) = {
+		this(titleS, new Date(), importance)
+	}
+
+	def this(titleS: String) = {
 		this(titleS, new Date(), Importance.Low)
 	}
 
 	def asProperty(): ObjectProperty[TodoItem] = {
 		ObjectProperty(this)
 	}
+
+	// TODO: - Delete items
+//	def delete(): Unit = {
+//		App.todoItems.remove(this)
+//	}
 
 	/** Used to determine if 2 TodoItem is equal to each other.
 	  *
@@ -37,12 +53,13 @@ class TodoItem(titleS: String, dueDateD: Date, importanceI: Importance = Importa
 	  */
 
 	override def equals(obj: scala.Any): Boolean = {
-		val anotherItem = obj.asInstanceOf[TodoItem]
-		if (anotherItem == null) { return false }
 
-		title.value == anotherItem.title.value &&
-			dueDate.value.getTime == anotherItem.dueDate.value.getTime &&
-			importance.value.id == anotherItem.importance.value.id
+		Option(obj.asInstanceOf[TodoItem]) match {
+			case None =>
+				false
+			case Some(anotherItem) =>
+				title.value == anotherItem.title.value
+		}
 	}
 
 }

@@ -33,7 +33,7 @@ class TodoListViewController(
 	private var todoItemImportance: Importance = Importance.Low
 
 	// Setup
-	datePicker.setValue(LocalDate.now())    // Today date
+//	datePicker.setValue(LocalDate.now())    // Today date
 	setLowPriority()                        // Low priority by default
 	setupTableView()
 
@@ -101,16 +101,26 @@ class TodoListViewController(
 	/** Adds and save the new TodoItem, only if there is a title */
 	def addTodoItem(): Unit = {
 		val title = titleTextField.text.value
-		val date = datePicker.getValue.toDate
 
-		val newItem = new TodoItem(title, date, todoItemImportance)
+		val newItem = new TodoItem(title, todoItemImportance)
 
+		// Set date if available
+		Option(datePicker.getValue) match {
+			case None => println("Using default date (Today) as due date")
+			case Some(localDate) => newItem.dueDate.value = localDate.toDate
+		}
+
+		// If title is empty, show error.
+		// If duplicate item exist, show error
+		// Else, add item
 		if (title.isEmpty) {
 			App.showNoTitleError()
 		} else if (App.todoItems.contains(newItem)) {
 			App.showDuplicatingItemError(newItem)
 		} else {
 			App.addItem(newItem)
+			titleTextField.clear()
+			titleTextField.requestFocus()
 		}
 	}
 

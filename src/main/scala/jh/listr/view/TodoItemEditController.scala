@@ -1,12 +1,16 @@
 package jh.listr.view
 
+import java.awt.Toolkit
+
 import jh.App
+import jh.App.{addItem, stage}
 import jh.listr.model.Importance.Importance
 import jh.listr.model.{Importance, TodoItem}
 
 import scalafx.event.Event
-import scalafx.scene.control.{Button, DatePicker, TextField}
-import scalafx.stage.Stage
+import scalafx.scene.control.Alert.AlertType
+import scalafx.scene.control._
+import scalafx.stage.{Modality, Stage}
 import scalafxml.core.macros.sfxml
 
 @sfxml
@@ -23,7 +27,12 @@ class TodoItemEditController (
 	var todoItem: TodoItem = _
 	var importance: Importance = _
 
-	def setTodoItem(item: TodoItem): Unit ={
+	/** Sets the TodoItem for this controller.
+	  *
+	  * @param item The TodoItem that is currently being edited.
+	  *
+	  */
+	def setTodoItem(item: TodoItem): Unit = {
 		todoItem = item
 
 		title.text = todoItem.title.value
@@ -57,11 +66,21 @@ class TodoItemEditController (
 		importance = Importance.High
 	}
 
-	/** Make changes when the button is clicked*/
-	def handleOK(event: Event): Unit ={
-		todoItem.title.value = title.text.value
-		todoItem.importance.value = importance
-		todoItem.dueDate.value = java.sql.Date.valueOf(datePicker.getValue)
+	/** Make changes to TodoItem when OK is clicked. */
+	def handleOK(): Unit ={
+		if (title.text.value.isEmpty) {
+			Toolkit.getDefaultToolkit.beep()
+		} else {
+			todoItem.title.value = title.text.value
+			todoItem.importance.value = importance
+			todoItem.dueDate.value = java.sql.Date.valueOf(datePicker.getValue)
+			dialogStage.close()
+		}
+	}
+
+	/** Show the delete confirmation dialog */
+	def handleDelete(): Unit = {
+		// TODO: - Delete item
 		dialogStage.close()
 	}
 
