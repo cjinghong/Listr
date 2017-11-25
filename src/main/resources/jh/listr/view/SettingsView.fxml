@@ -20,7 +20,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.SettingsViewController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.SettingsViewController">
     <children>
         <HBox layoutX="195.0" layoutY="14.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
             <children>
@@ -39,15 +39,15 @@
                             <children>
                                 <HBox fx:id="gn_hbox" spacing="5.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
                                     <children>
-                                        <Button mnemonicParsing="false" text="Cancel" />
-                                        <Button mnemonicParsing="false" text="Save" />
+                                        <Button fx:id="gn_cancel" mnemonicParsing="false" text="Cancel" />
+                                        <Button fx:id="gn_save" mnemonicParsing="false" text="Save" />
                                     </children>
                                 </HBox>
                                 <AnchorPane fx:id="gn_anchor" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                                     <children>
                                         <VBox>
                                             <children>
-                                                <Label text="Save Location" />
+                                                <Label text="Export Database" />
                                                 <HBox spacing="15.0">
                                                     <children>
                                                         <TextField fx:id="gn_save_bar" prefHeight="25.0" prefWidth="286.0" />
@@ -102,7 +102,7 @@
                                         <VBox style="-fx-border-width: 0px, 0px, 1px, 0px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                             <children>
                                                 <Label text="Choose Themes" />
-                                                <GridPane alignment="CENTER" hgap="10.0">
+                                                <GridPane alignment="CENTER" hgap="5.0">
                                                     <columnConstraints>
                                                         <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="125.0" prefWidth="125.0" />
                                                         <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="127.0" prefWidth="127.0" />
@@ -123,7 +123,7 @@
                                                                 <Insets bottom="20.0" left="50.0" right="50.0" top="20.0" />
                                                             </padding>
                                                         </Button>
-                                                        <Button fx:id="ap_t_silver" mnemonicParsing="false" text="Silver" GridPane.columnIndex="2">
+                                                        <Button fx:id="ap_t_gray" mnemonicParsing="false" text="Gray" GridPane.columnIndex="2">
                                                             <padding>
                                                                 <Insets bottom="20.0" left="50.0" right="50.0" top="20.0" />
                                                             </padding>
