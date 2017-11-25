@@ -8,6 +8,7 @@ import scalafx.scene.layout.{AnchorPane, HBox}
 import scalafxml.core.macros.sfxml
 import scalafx.Includes._
 import scalafx.animation.{FillTransition, TranslateTransition}
+import scalafx.beans.property.{BooleanProperty, IntegerProperty}
 import scalafx.scene.control.Alert.AlertType
 import scalafx.scene.paint.Color
 import scalafx.scene.shape.{Circle, Rectangle}
@@ -39,8 +40,11 @@ class SettingsViewController(
                               private val ap_t_black: Button
                             ) {
   var changed = false
-  var toggle = App.settingsVal
+  var toggle: Boolean = App.settingsVal
   var saveLocal = ""
+  val tempToggle: Boolean = toggle
+  val tempDuration: Int = App.settingsDuration
+  val tempFont: Int = App.ap_font
 
   /**Initialize the settings view, populates combobox value to default saved value,
     * set toggle switch to correct position and hides save confirmation box
@@ -51,7 +55,7 @@ class SettingsViewController(
     *
     * Default position is stored in App.settingsVal
     */
-  private def settingsInitialize: Unit = {
+  private def settingsInitialize(): Unit = {
     val delPeriod = List("2 Days", "3 Days", "1 Week")
     val fonts = scalafx.scene.text.Font.families
     //populates the delete period combobox
@@ -76,7 +80,7 @@ class SettingsViewController(
   }
 
   //initialize call
-  settingsInitialize
+  settingsInitialize()
 
   /**Used to animate toggle switch
     *
@@ -137,11 +141,16 @@ class SettingsViewController(
     }
   }
 
-  private def cancelSettings(): Unit = {
-    toggle = App.settingsVal
-    gn_del_period.getSelectionModel.select(App.settingsDuration)
-    gn_hbox.visible = false
-    settingsInitialize
+  private def cancelSettings(tab: Int): Unit = {
+    if (tab == 0) {
+      toggle = !tempToggle
+      gn_del_period.getSelectionModel.select(tempDuration)
+      gn_hbox.visible = false
+      toggleSwitch()
+    } else {
+      ap_font.getSelectionModel.select(tempFont)
+      ap_hbox.visible = false
+    }
   }
 
   /**Used to save settings
@@ -209,8 +218,8 @@ class SettingsViewController(
   gn_save.onMouseClicked = (e:MouseEvent) => saveSettings(0)
   ap_save.onMouseClicked = (e:MouseEvent) => saveSettings(1)
 
-  gn_cancel.onMouseClicked = (e:MouseEvent) => cancelSettings()
-
+  gn_cancel.onMouseClicked = (e:MouseEvent) => cancelSettings(0)
+  ap_cancel.onMouseClicked = (e:MouseEvent) => cancelSettings(1)
   //used to animate the toggle switch by calling toggleSwitch() everytime user clicks on the toggle switch
   gn_tog_rec.onMouseClicked =(e:MouseEvent) => toggleSwitch()
   gn_tog_circle.onMouseClicked =(e:MouseEvent) => toggleSwitch()
