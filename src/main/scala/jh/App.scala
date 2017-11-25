@@ -10,6 +10,7 @@ import jh.listr.view.TodoItemEditController
 import scalafx.Includes._
 import scalafx.application.JFXApp
 import scalafx.application.JFXApp.PrimaryStage
+import scalafx.beans.property.BooleanProperty
 import scalafx.collections.ObservableBuffer
 import scalafx.scene.Scene
 import scalafx.scene.control.Alert.AlertType
@@ -33,9 +34,25 @@ object App extends JFXApp {
 	todoItems += new TodoItem("Something", new Date(4000), Importance.Low)
 	//	todoItems += new TodoItem("Do assignments! A duplicating TodoItem already exist. Are you sure you want to add it? A duplicating TodoItem already exist. Are you sure you want to add it?", new Date(1000), Importance.Low)
 
+	/**
+		* settingsVal, settingsDuration, ap_font stores the user settings
+		* passed from SettingsViewController
+		* settingsVal is used to store toggle switch information to initialize
+		* the correct toggle switch position when user returns to settings view
+		*
+		* settingsDuration stores the delete period chosen in int, which is then
+		* used to set the del_period combobox default value
+		*
+		* ap_font store the font chosen in int, which is then used to set the ap_font
+		* combobox default value
+		*/
+	var settingsVal = false
+	var settingsDuration = 0
+	var ap_font = 0
 
 	private var currentlyDisplayingView: String = ""
-	private val cssResource = getClass.getResource("./listr/view/style.css")
+	//default css location
+	private val cssResource = getClass.getResource("./listr/view/style.css").toExternalForm
 
 	private val rootResource = getClass.getResourceAsStream("./listr/view/RootMenu.fxml")
 	private val loader = new FXMLLoader(null, NoDependencyResolver)
@@ -47,7 +64,7 @@ object App extends JFXApp {
 		minHeight = 300
 		title = "Listr"
 		scene = new Scene {
-			stylesheets ++= List(cssResource.toExternalForm)
+			stylesheets ++= List(cssResource)
 			root = roots
 
 		}
@@ -67,6 +84,16 @@ object App extends JFXApp {
 		todoItems.sort({ (a, b) =>
 			a.dueDate.value.getTime < b.dueDate.value.getTime
 		})
+	}
+
+	/**used to change the theme(css file) of the App
+		*
+		* @param cssLocate the css theme location in string passed from SettingsViewController
+		*/
+	def changeStylesheets(cssLocate: String): Unit = {
+		var cssResource = getClass.getResource(cssLocate).toExternalForm
+		stage.getScene.getStylesheets.remove(cssResource)
+		stage.getScene.getStylesheets.add(cssResource)
 	}
 
 	// ---------
