@@ -180,11 +180,11 @@ object App extends JFXApp {
 
 		// Only loads if it is not already showing
 		if (currentDisplayedView != ID_SETTINGS || forced) {
-
 			val resource = getClass.getResourceAsStream("./listr/view/SettingsView.fxml")
 			val loader = new FXMLLoader(null, NoDependencyResolver)
 			loader.load(resource)
 			val settingsView = loader.getRoot[jfxs.Parent]
+			settingsView.id = ID_SETTINGS
 
 			this.roots.setCenter(settingsView)
 		}
