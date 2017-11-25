@@ -81,7 +81,7 @@ object App extends JFXApp {
 	/** Adds a new TodoItem to the list. This also saves the TodoItem to the database. */
 	def addItem(newItem: TodoItem): Unit = {
 		todoItems.add(newItem)
-		todoItems.sort({ (a, b) =>
+		todoItems.sort({ (a,b) =>
 			a.dueDate.value.getTime < b.dueDate.value.getTime
 		})
 	}
