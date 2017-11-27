@@ -59,11 +59,10 @@ class TodoCircle(item: TodoItem) extends StackPane with SwipeDownToggle {
 	// text
 	val text: Text = new Text() {
 		text <== item.title
-		font = Font(20)
 		fill = Color.White
-
 		wrappingWidth <== circle.radius * 2 - 10
 		boundsType = TextBoundsType.Visual
+		style = "-fx-font-size: 20px;"
 	}
 
 	// Adds circle and text to self

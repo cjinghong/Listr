@@ -52,8 +52,6 @@ class TodoItemController (
 		// Change background color whenever the todoitem's completion state is changed
 		item.completed.onChange({ (_, _, newValue) =>
 			// Re-sort items
-			// TODO: - Do we really need to re-sort the item here??
-			// App.sortTodoItems()
 			updateBackgroundState(newValue)
 		})
 	}

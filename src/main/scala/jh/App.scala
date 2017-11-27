@@ -35,20 +35,19 @@ object App extends JFXApp {
 	//	todoItems += new TodoItem("Do assignments! A duplicating TodoItem already exist. Are you sure you want to add it? A duplicating TodoItem already exist. Are you sure you want to add it?", new Date(1000), Importance.Low)
 
 	/**
-		* settingsVal, settingsDuration, ap_font stores the user settings
-		* passed from SettingsViewController
-		* settingsVal is used to store toggle switch information to initialize
-		* the correct toggle switch position when user returns to settings view
-		*
-		* settingsDuration stores the delete period chosen in int, which is then
-		* used to set the del_period combobox default value
-		*
-		* ap_font store the font chosen in int, which is then used to set the ap_font
-		* combobox default value
-		*/
+	  * settingsVal, settingsDuration, ap_font stores the user settings
+	  * passed from SettingsViewController
+	  * settingsVal is used to store toggle switch information to initialize
+	  * the correct toggle switch position when user returns to settings view
+	  *
+	  * settingsDuration stores the delete period chosen in int, which is then
+	  * used to set the del_period combobox default value
+	  *
+	  * selectedFontIndex is the index of the selected font from SettingsViewController
+	  */
 	var settingsVal = false
 	var settingsDuration = 0
-	var ap_font = 0
+	var selectedFontIndex = 0
 
 	private var currentlyDisplayingView: String = ""
 	//default css location
@@ -66,7 +65,6 @@ object App extends JFXApp {
 		scene = new Scene {
 			stylesheets ++= List(cssResource)
 			root = roots
-
 		}
 		resizable = true
 	}
@@ -81,19 +79,27 @@ object App extends JFXApp {
 	/** Adds a new TodoItem to the list. This also saves the TodoItem to the database. */
 	def addItem(newItem: TodoItem): Unit = {
 		todoItems.add(newItem)
-		todoItems.sort({ (a,b) =>
+		todoItems.sort({ (a, b) =>
 			a.dueDate.value.getTime < b.dueDate.value.getTime
 		})
 	}
 
-	/**used to change the theme(css file) of the App
-		*
-		* @param cssLocate the css theme location in string passed from SettingsViewController
-		*/
+	/** used to change the theme(css file) of the App
+	  *
+	  * @param cssLocate the css theme location in string passed from SettingsViewController
+	  */
 	def changeStylesheets(cssLocate: String): Unit = {
 		var cssResource = getClass.getResource(cssLocate).toExternalForm
 		stage.getScene.getStylesheets.remove(cssResource)
 		stage.getScene.getStylesheets.add(cssResource)
+	}
+
+	/** Change main app font
+	  *
+	  * @param font receives font family in the form of string
+	  */
+	def changeFont(font: String): Unit = {
+		stage.getScene.getRoot.setStyle(s"-fx-font-family: $font")
 	}
 
 	// ---------
