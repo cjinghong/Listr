@@ -17,20 +17,28 @@ object DateUtil {
 		  * @return formatted string
 		  */
 		def asString: String = {
-			if (date == null) {
-				return null;
-			}
-			return DATE_FORMATTER.format(date);
+			if (date == null) return null
+			DATE_FORMATTER.format(date)
 		}
 	}
 
 	implicit class DateToLocalDate(val date: Date) {
+		/** Converts a [[Date]] to a [[LocalDate]] object.
+		  *
+		  * @param date the LocalDate object
+		  * @return the [[LocalDate]] object
+		  */
 		def toLocalDate: LocalDate = {
 			new java.sql.Date(date.getTime).toLocalDate
 		}
 	}
 
 	implicit class LocalDateToDate(val localDate: LocalDate) {
+		/** Converts a [[LocalDate]] to a [[Date]] object.
+		  *
+		  * @param localDate the LocalDate object
+		  * @return the [[Date]] object
+		  */
 		def toDate: Date = {
 			java.sql.Date.valueOf(localDate)
 		}
@@ -57,5 +65,6 @@ object DateUtil {
 			parseDate != null
 		}
 	}
+
 
 }

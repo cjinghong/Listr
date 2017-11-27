@@ -74,13 +74,14 @@ class TodoItemEditController (
 			todoItem.title.value = title.text.value
 			todoItem.importance.value = importance
 			todoItem.dueDate.value = java.sql.Date.valueOf(datePicker.getValue)
+			todoItem.save()
 			dialogStage.close()
 		}
 	}
 
 	/** Show the delete confirmation dialog */
 	def handleDelete(): Unit = {
-		// TODO: - Delete item
+		App.deleteItem(todoItem)
 		dialogStage.close()
 	}
 

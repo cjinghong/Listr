@@ -119,6 +119,11 @@ class SettingsViewController(
 			toggle <== false
 			gn_del_period.disable = true
 		} else {
+			// Removes all completed items
+			for (item <- App.todoItems.filter(_.completed.value)) {
+				App.deleteItem(item)
+			}
+
 			toggleSwitchAnimate(100, Color.White, Color.LightGreen, gn_tog_circle, gn_tog_rec, 20)
 			toggle <== true
 			gn_del_period.disable = false

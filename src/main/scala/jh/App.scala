@@ -5,8 +5,10 @@ import javafx.scene.layout._
 import javafx.{scene => jfxs}
 
 import jh.listr.model.{Importance, TodoItem}
+import jh.listr.util.Database
 import jh.listr.view.TodoItemEditController
 
+import scala.util.{Failure, Success}
 import scalafx.Includes._
 import scalafx.application.JFXApp
 import scalafx.application.JFXApp.PrimaryStage
@@ -26,13 +28,11 @@ object App extends JFXApp {
 	private val ID_TIMELINE = "timeline"
 	private val ID_SETTINGS = "settings"
 
+	Database.setupDB()
+
 	/** The data as an observable list of TodoItems */
 	val todoItems = new ObservableBuffer[TodoItem]()
-	todoItems += new TodoItem("Do assignments!", new Date(1000), Importance.Low)
-	todoItems += new TodoItem("Wash the floor", new Date(2000), Importance.Medium)
-	todoItems += new TodoItem("Kill myself", new Date(3000), Importance.High)
-	todoItems += new TodoItem("Something", new Date(4000), Importance.Low)
-	//	todoItems += new TodoItem("Do assignments! A duplicating TodoItem already exist. Are you sure you want to add it? A duplicating TodoItem already exist. Are you sure you want to add it?", new Date(1000), Importance.Low)
+	todoItems ++= TodoItem.getAllTodoItems
 
 	/**
 	  * settingsVal, settingsDuration, ap_font stores the user settings
@@ -75,13 +75,31 @@ object App extends JFXApp {
 	// TodoListView is the first to be shown by default
 	showToDoList()
 
-	// todo - Save the todo item here!
-	/** Adds a new TodoItem to the list. This also saves the TodoItem to the database. */
-	def addItem(newItem: TodoItem): Unit = {
-		todoItems.add(newItem)
-		todoItems.sort({ (a, b) =>
-			a.dueDate.value.getTime < b.dueDate.value.getTime
-		})
+	/** Saves the given todo item to database, then updates the observable list. */
+	def addItem(item: TodoItem): Unit = {
+		item.save() match {
+			case Success(x) =>
+				if (!todoItems.contains(item)) {
+					todoItems.add(item)
+					todoItems.sort({ (a, b) =>
+						a.dueDate.value.getTime < b.dueDate.value.getTime
+					})
+				}
+			case Failure(x) =>
+				println("Failed to add todo item")
+		}
+	}
+
+	def deleteItem(item: TodoItem): Unit = {
+		item.delete() match {
+			case Success(x) =>
+				todoItems.remove(item)
+				todoItems.sort({ (a, b) =>
+					a.dueDate.value.getTime < b.dueDate.value.getTime
+				})
+			case Failure(x) =>
+				println("Failed to remove todo item")
+		}
 	}
 
 	/** used to change the theme(css file) of the App
@@ -211,15 +229,11 @@ object App extends JFXApp {
 
 	/** Show a confirmation popup dialog for when there a duplicating TodoItem already existed. */
 	def showDuplicatingItemError(item: TodoItem): Unit = {
-		val result = new Alert(AlertType.Confirmation, "A duplicating TodoItem already exist. Are you sure you want to add it?") {
+		val result = new Alert(AlertType.Warning, "A duplicating TodoItem already exist.") {
 			headerText = "Item exists"
 			initOwner(stage)
 			initModality(Modality.ApplicationModal)
 		}.showAndWait()
-		result match {
-			case Some(ButtonType.OK) => addItem(item)
-			case _ => println("Not adding item")
-		}
 	}
 
 	def showEditDialog(todoItem: TodoItem): Unit = {
@@ -239,28 +253,6 @@ object App extends JFXApp {
 		control.dialogStage = dialog
 		dialog.showAndWait()
 	}
-
-	//	/** Sorts the list of todoItems ascending by date, and group them by completed first, then incomplete  */
-	//	def sortTodoItems(): Unit = {
-	//		var incompleteTodoItems = new ObservableBuffer[TodoItem]()
-	//		var completedTodoItems = new ObservableBuffer[TodoItem]()
-	//
-	//		for (item <- todoItems) {
-	//			if (item.completed.value) completedTodoItems.add(item)
-	//			else incompleteTodoItems.add(item)
-	//		}
-	//
-	//		incompleteTodoItems.sort({ (a, b) =>
-	//			a.dueDate.value.getTime < b.dueDate.value.getTime
-	//		})
-	//		completedTodoItems.sort({ (a, b) =>
-	//			a.dueDate.value.getTime < b.dueDate.value.getTime
-	//		})
-	//
-	//		todoItems.clear()
-	//		todoItems ++= incompleteTodoItems
-	//		todoItems ++= completedTodoItems
-	//	}
 }
 
 

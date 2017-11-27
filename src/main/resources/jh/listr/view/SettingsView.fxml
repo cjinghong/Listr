@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -20,7 +27,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.SettingsViewController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jh.listr.view.SettingsViewController">
     <children>
         <HBox layoutX="195.0" layoutY="14.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
             <children>
@@ -45,7 +52,7 @@
                                 </HBox>
                                 <AnchorPane fx:id="gn_anchor" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                                     <children>
-                                        <VBox>
+                                        <VBox disable="true">
                                             <children>
                                                 <Label text="Export Database" />
                                                 <HBox spacing="15.0">
@@ -57,30 +64,34 @@
                                             </children>
                                         </VBox>
                                         <Separator prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0" />
-                                        <VBox layoutY="70.0" spacing="5.0">
+                                        <HBox layoutY="74.0" spacing="5.0">
                                             <children>
                                                 <HBox spacing="8.0">
                                                     <children>
-                                                        <Label text="Delete Period" />
-                                                        <Pane>
-                                                            <children>
-                                                                <Rectangle fx:id="gn_tog_rec" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="18.0" stroke="#0000005c" strokeType="INSIDE" width="40.0">
-                                                                    <cursor>
-                                                                        <Cursor fx:constant="HAND" />
-                                                                    </cursor>
-                                                                </Rectangle>
-                                                                <Circle fx:id="gn_tog_circle" centerX="10.0" centerY="9.0" fill="WHITE" radius="9.0" stroke="#0000006e" strokeType="INSIDE">
-                                                                    <cursor>
-                                                                        <Cursor fx:constant="HAND" />
-                                                                    </cursor>
-                                                                </Circle>
-                                                            </children>
-                                                        </Pane>
+                                          <VBox spacing="10.0">
+                                             <children>
+                                                              <Label text="Delete item immediately after completing" />
+                                                              <Pane>
+                                                                  <children>
+                                                                      <Rectangle fx:id="gn_tog_rec" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="18.0" stroke="#0000005c" strokeType="INSIDE" width="40.0">
+                                                                          <cursor>
+                                                                              <Cursor fx:constant="HAND" />
+                                                                          </cursor>
+                                                                      </Rectangle>
+                                                                      <Circle fx:id="gn_tog_circle" centerX="10.0" centerY="9.0" fill="WHITE" radius="9.0" stroke="#0000006e" strokeType="INSIDE">
+                                                                          <cursor>
+                                                                              <Cursor fx:constant="HAND" />
+                                                                          </cursor>
+                                                                      </Circle>
+                                                                  </children>
+                                                              </Pane>
+                                             </children>
+                                          </VBox>
                                                     </children>
                                                 </HBox>
-                                                <ComboBox fx:id="gn_del_period" disable="true" prefWidth="150.0" promptText="Select" />
+                                                <ComboBox fx:id="gn_del_period" disable="true" prefWidth="150.0" promptText="Select" visible="false" />
                                             </children>
-                                        </VBox>
+                                        </HBox>
                                     </children>
                                 </AnchorPane>
                             </children>
