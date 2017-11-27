@@ -139,12 +139,12 @@
                         </a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="TodoCircle.html" title="A Circle that represents a single TodoItem."></a>
-                        <a href="TodoCircle.html" title="A Circle that represents a single TodoItem.">
+                        <a class="class" href="TodoCircle.html" title="A StackPane that includes a circle, and a text in the middle."></a>
+                        <a href="TodoCircle.html" title="A StackPane that includes a circle, and a text in the middle.">
                           TodoCircle
                         </a>
                       </li><li class="current-entities indented3">
-                        <span class="separator"></span>
+                        <a class="object" href="TodoItem$.html" title=""></a>
                         <a class="class" href="" title="A class to represent a single To-do item in the todo-list."></a>
                         <a href="" title="A class to represent a single To-do item in the todo-list.">
                           TodoItem
@@ -156,14 +156,16 @@
           <div id="content">
             <body class="class type">
       <div id="definition">
-        <div class="big-circle class">c</div>
+        <a href="TodoItem$.html" title="See companion object"><div class="big-circle class-companion-object">c</div></a>
         <p id="owner"><a href="../../index.html" class="extype" name="jh">jh</a>.<a href="../index.html" class="extype" name="jh.listr">listr</a>.<a href="index.html" class="extype" name="jh.listr.model">model</a></p>
-        <h1>TodoItem<span class="permalink">
+        <h1><a href="TodoItem$.html" title="See companion object">TodoItem</a><span class="permalink">
       <a href="../../../jh/listr/model/TodoItem.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
-        <h3><span class="morelinks"></span></h3>
+        <h3><span class="morelinks"><div>
+            Companion <a href="TodoItem$.html" title="See companion object">object TodoItem</a>
+          </div></span></h3>
       </div>
 
       <h4 id="signature" class="signature">
@@ -230,7 +232,39 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="jh.listr.model.TodoItem#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="jh.listr.model.TodoItem#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(titleS:String):jh.listr.model.TodoItem"></a><a id="&lt;init&gt;:TodoItem"></a>
+      <span class="permalink">
+      <a href="../../../jh/listr/model/TodoItem.html#&lt;init&gt;(titleS:String):jh.listr.model.TodoItem" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TodoItem</span><span class="params">(<span name="titleS">titleS: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
+      </span>
+      
+      
+    </li><li name="jh.listr.model.TodoItem#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(titleS:String,importance:jh.listr.model.Importance.Importance):jh.listr.model.TodoItem"></a><a id="&lt;init&gt;:TodoItem"></a>
+      <span class="permalink">
+      <a href="../../../jh/listr/model/TodoItem.html#&lt;init&gt;(titleS:String,importance:jh.listr.model.Importance.Importance):jh.listr.model.TodoItem" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TodoItem</span><span class="params">(<span name="titleS">titleS: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="importance">importance: <a href="Importance$.html#Importance=jh.listr.model.Importance.Value" class="extmbr" name="jh.listr.model.Importance.Importance">Importance</a></span>)</span>
+      </span>
+      
+      
+    </li><li name="jh.listr.model.TodoItem#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="&lt;init&gt;(titleS:String,dueDateD:java.util.Date,importanceI:jh.listr.model.Importance.Importance):jh.listr.model.TodoItem"></a><a id="&lt;init&gt;:TodoItem"></a>
       <span class="permalink">
       <a href="../../../jh/listr/model/TodoItem.html#&lt;init&gt;(titleS:String,dueDateD:java.util.Date,importanceI:jh.listr.model.Importance.Importance):jh.listr.model.TodoItem" title="Permalink">
@@ -377,6 +411,22 @@
       </span>
       
       
+    </li><li name="jh.listr.model.TodoItem#delete" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="delete():scala.util.Try[Int]"></a><a id="delete():Try[Int]"></a>
+      <span class="permalink">
+      <a href="../../../jh/listr/model/TodoItem.html#delete():scala.util.Try[Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">delete</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Delete the current TodoItem from database (If it exist)</p>
     </li><li name="jh.listr.model.TodoItem#dueDate" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="dueDate:scalafx.beans.property.ObjectProperty[java.util.Date]"></a><a id="dueDate:ObjectProperty[Date]"></a>
       <span class="permalink">
@@ -424,9 +474,25 @@
         <span class="name">equals</span><span class="params">(<span name="obj">obj: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       
-      <p class="shortcomment cmt">Used to determine if 2 TodoItem is equal to each other.</p><div class="fullcomment"><div class="comment cmt"><p>Used to determine if 2 TodoItem is equal to each other.</p><p>Compares the <code>title</code>, <code>dueDate</code>, and <code>importance</code>
-to figure out if the TodoItem is the same.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="jh.listr.model.TodoItem">TodoItem</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="jh.listr.model.TodoItem">TodoItem</a> → AnyRef → Any</dd></dl></div>
+    </li><li name="jh.listr.model.TodoItem#existingItemId" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="existingItemId:Option[Int]"></a>
+      <span class="permalink">
+      <a href="../../../jh/listr/model/TodoItem.html#existingItemId:Option[Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">existingItemId</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Get the existing id of the current TodoItem
+</p><div class="fullcomment"><div class="comment cmt"><p>Get the existing id of the current TodoItem
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The unique ID of the TodoItem</p></dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
@@ -561,6 +627,23 @@ to figure out if the TodoItem is the same.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="jh.listr.model.TodoItem#save" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="save():scala.util.Try[Int]"></a><a id="save():Try[Int]"></a>
+      <span class="permalink">
+      <a href="../../../jh/listr/model/TodoItem.html#save():scala.util.Try[Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">save</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.util.Try">Try</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Updates the existing TodoItem,
+If it doesn't exist, insert the new TodoItem into database.</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">

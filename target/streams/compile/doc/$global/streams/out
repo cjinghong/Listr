@@ -7,20 +7,29 @@
 [0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/classes:/Users/chanjinghong/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.3.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
-[0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/null/jre/lib/ext/jfxrt.jar:/Users/chanjinghong/.ivy2/cache/org.scalafx/scalafx_2.12/jars/scalafx_2.12-8.0.144-R12.jar:/Users/chanjinghong/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.3.jar:/Users/chanjinghong/.ivy2/cache/org.scalafx/scalafxml-core-sfx8_2.12/jars/scalafxml-core-sfx8_2.12-0.4.jar:/Users/chanjinghong/.ivy2/cache/org.scalafx/scalafxml-core-macros-sfx8_2.12/jars/scalafxml-core-macros-sfx8_2.12-0.4.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/null/jre/lib/ext/jfxrt.jar:/Users/chanjinghong/.ivy2/cache/org.scalafx/scalafx_2.12/jars/scalafx_2.12-8.0.144-R12.jar:/Users/chanjinghong/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.3.jar:/Users/chanjinghong/.ivy2/cache/org.scalafx/scalafxml-core-sfx8_2.12/jars/scalafxml-core-sfx8_2.12-0.4.jar:/Users/chanjinghong/.ivy2/cache/org.scalafx/scalafxml-core-macros-sfx8_2.12/jars/scalafxml-core-macros-sfx8_2.12-0.4.jar:/Users/chanjinghong/.ivy2/cache/org.scalikejdbc/scalikejdbc_2.12/jars/scalikejdbc_2.12-3.1.0.jar:/Users/chanjinghong/.ivy2/cache/org.scalikejdbc/scalikejdbc-core_2.12/jars/scalikejdbc-core_2.12-3.1.0.jar:/Users/chanjinghong/.ivy2/cache/org.apache.commons/commons-dbcp2/jars/commons-dbcp2-2.1.1.jar:/Users/chanjinghong/.ivy2/cache/org.apache.commons/commons-pool2/jars/commons-pool2-2.4.2.jar:/Users/chanjinghong/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.2.jar:/Users/chanjinghong/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.25.jar:/Users/chanjinghong/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.9.jar:/Users/chanjinghong/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.8.2.jar:/Users/chanjinghong/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/bundles/scala-parser-combinators_2.12-1.0.6.jar:/Users/chanjinghong/.ivy2/cache/org.scalikejdbc/scalikejdbc-interpolation_2.12/jars/scalikejdbc-interpolation_2.12-3.1.0.jar:/Users/chanjinghong/.ivy2/cache/org.scalikejdbc/scalikejdbc-interpolation-macro_2.12/jars/scalikejdbc-interpolation-macro_2.12-3.1.0.jar:/Users/chanjinghong/.ivy2/cache/com.h2database/h2/jars/h2-1.4.196.jar:/Users/chanjinghong/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.2.3.jar:/Users/chanjinghong/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.2.3.jar:/Users/chanjinghong/.ivy2/cache/org.apache.derby/derby/jars/derby-10.14.1.0.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/App.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/model/Importance.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/model/SwipeDownToggle.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/model/TodoCircle.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/model/TodoItem.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/util/Database.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/util/DateUtil.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/view/RootMenuController.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/view/SettingsViewController.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/view/TimelineCardController.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/view/TimelineViewController.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/view/TodoItemController.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/view/TodoItemEditController.scala[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/view/TodoListViewController.scala[0m
-[0m[[0m[33mwarn[0m] [0m[0m/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/util/DateUtil.scala:27:3: Could not find any member to link for "Date".[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/util/DateUtil.scala:48:3: Could not find any member to link for "Date".[0m
 [0m[[0m[33mwarn[0m] [0m[0m		/** Converts a String in the format of the defined [[DATE_PATTERN]][0m
 [0m[[0m[33mwarn[0m] [0m[0m		^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/util/DateUtil.scala:37:3: Could not find any member to link for "java.time.LocalDate".[0m
+[0m[[0m[33mwarn[0m] [0m[0m		/** Converts a [[java.time.LocalDate]] to a [[Date]] object.[0m
+[0m[[0m[33mwarn[0m] [0m[0m		^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/chanjinghong/IdeaProjects/Listr/src/main/scala/jh/listr/util/DateUtil.scala:26:3: Could not find any member to link for "java.util.Date".[0m
+[0m[[0m[33mwarn[0m] [0m[0m		/** Converts a [[java.util.Date]] to a [[java.time.LocalDate]] object.[0m
+[0m[[0m[33mwarn[0m] [0m[0m		^[0m
+[0m[[0m[33mwarn[0m] [0m[0mthree warnings found[0m
 [0m[[0m[0minfo[0m] [0m[0mMain Scala API documentation successful.[0m

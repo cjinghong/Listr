@@ -23,10 +23,10 @@ object DateUtil {
 	}
 
 	implicit class DateToLocalDate(val date: Date) {
-		/** Converts a [[Date]] to a [[LocalDate]] object.
+		/** Converts a [[java.util.Date]] to a [[java.time.LocalDate]] object.
 		  *
 		  * @param date the LocalDate object
-		  * @return the [[LocalDate]] object
+		  * @return the [[java.time.LocalDate]] object
 		  */
 		def toLocalDate: LocalDate = {
 			new java.sql.Date(date.getTime).toLocalDate
@@ -34,10 +34,10 @@ object DateUtil {
 	}
 
 	implicit class LocalDateToDate(val localDate: LocalDate) {
-		/** Converts a [[LocalDate]] to a [[Date]] object.
+		/** Converts a [[java.time.LocalDate]] to a [[Date]] object.
 		  *
 		  * @param localDate the LocalDate object
-		  * @return the [[Date]] object
+		  * @return the [[java.util.Date]] object
 		  */
 		def toDate: Date = {
 			java.sql.Date.valueOf(localDate)

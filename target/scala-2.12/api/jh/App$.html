@@ -246,10 +246,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="jh.App#addItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="addItem(newItem:jh.listr.model.TodoItem):Unit"></a><a id="addItem(TodoItem):Unit"></a>
+    </li><li name="jh.App#addItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="addItem(item:jh.listr.model.TodoItem):Unit"></a><a id="addItem(TodoItem):Unit"></a>
       <span class="permalink">
-      <a href="../jh/App$.html#addItem(newItem:jh.listr.model.TodoItem):Unit" title="Permalink">
+      <a href="../jh/App$.html#addItem(item:jh.listr.model.TodoItem):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -258,10 +258,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">addItem</span><span class="params">(<span name="newItem">newItem: <a href="listr/model/TodoItem.html" class="extype" name="jh.listr.model.TodoItem">TodoItem</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">addItem</span><span class="params">(<span name="item">item: <a href="listr/model/TodoItem.html" class="extype" name="jh.listr.model.TodoItem">TodoItem</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Adds a new TodoItem to the list.</p><div class="fullcomment"><div class="comment cmt"><p>Adds a new TodoItem to the list. This also saves the TodoItem to the database.</p></div></div>
+      <p class="shortcomment cmt">Saves the given todo item to database, then updates the observable list.</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -278,6 +278,42 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="jh.App#changeFont" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="changeFont(font:String):Unit"></a><a id="changeFont(String):Unit"></a>
+      <span class="permalink">
+      <a href="../jh/App$.html#changeFont(font:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">changeFont</span><span class="params">(<span name="font">font: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Change main app font
+</p><div class="fullcomment"><div class="comment cmt"><p>Change main app font
+</p></div><dl class="paramcmts block"><dt class="param">font</dt><dd class="cmt"><p>receives font family in the form of string</p></dd></dl></div>
+    </li><li name="jh.App#changeStylesheets" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="changeStylesheets(cssLocate:String):Unit"></a><a id="changeStylesheets(String):Unit"></a>
+      <span class="permalink">
+      <a href="../jh/App$.html#changeStylesheets(cssLocate:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">changeStylesheets</span><span class="params">(<span name="cssLocate">cssLocate: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">used to change the theme(css file) of the App
+</p><div class="fullcomment"><div class="comment cmt"><p>used to change the theme(css file) of the App
+</p></div><dl class="paramcmts block"><dt class="param">cssLocate</dt><dd class="cmt"><p>the css theme location in string passed from SettingsViewController</p></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
@@ -316,6 +352,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>JFXApp → DelayedInit</dd></dl></div>
+    </li><li name="jh.App#deleteItem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="deleteItem(item:jh.listr.model.TodoItem):Unit"></a><a id="deleteItem(TodoItem):Unit"></a>
+      <span class="permalink">
+      <a href="../jh/App$.html#deleteItem(item:jh.listr.model.TodoItem):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deleteItem</span><span class="params">(<span name="item">item: <a href="listr/model/TodoItem.html" class="extype" name="jh.listr.model.TodoItem">TodoItem</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -514,6 +566,78 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>JFXApp</dd></dl></div>
+    </li><li name="jh.App#refreshCurrentView" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="refreshCurrentView():Unit"></a>
+      <span class="permalink">
+      <a href="../jh/App$.html#refreshCurrentView():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">refreshCurrentView</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Re-loads the current view.</p>
+    </li><li name="jh.App#selectedFontIndex" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="selectedFontIndex:Int"></a>
+      <span class="permalink">
+      <a href="../jh/App$.html#selectedFontIndex:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">selectedFontIndex</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      
+    </li><li name="jh.App#settingsDuration" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="settingsDuration:Int"></a>
+      <span class="permalink">
+      <a href="../jh/App$.html#settingsDuration:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">settingsDuration</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      
+    </li><li name="jh.App#settingsVal" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="settingsVal:Boolean"></a>
+      <span class="permalink">
+      <a href="../jh/App$.html#settingsVal:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">settingsVal</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">settingsVal, settingsDuration, ap_font stores the user settings
+passed from SettingsViewController
+settingsVal is used to store toggle switch information to initialize
+the correct toggle switch position when user returns to settings view</p><div class="fullcomment"><div class="comment cmt"><p>settingsVal, settingsDuration, ap_font stores the user settings
+passed from SettingsViewController
+settingsVal is used to store toggle switch information to initialize
+the correct toggle switch position when user returns to settings view</p><p>settingsDuration stores the delete period chosen in int, which is then
+used to set the del_period combobox default value</p><p>selectedFontIndex is the index of the selected font from SettingsViewController
+</p></div></div>
     </li><li name="jh.App#showDuplicatingItemError" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="showDuplicatingItemError(item:jh.listr.model.TodoItem):Unit"></a><a id="showDuplicatingItemError(TodoItem):Unit"></a>
       <span class="permalink">
@@ -530,6 +654,22 @@
       </span>
       
       <p class="shortcomment cmt">Show a confirmation popup dialog for when there a duplicating TodoItem already existed.</p>
+    </li><li name="jh.App#showEditDialog" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="showEditDialog(todoItem:jh.listr.model.TodoItem):Unit"></a><a id="showEditDialog(TodoItem):Unit"></a>
+      <span class="permalink">
+      <a href="../jh/App$.html#showEditDialog(todoItem:jh.listr.model.TodoItem):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">showEditDialog</span><span class="params">(<span name="todoItem">todoItem: <a href="listr/model/TodoItem.html" class="extype" name="jh.listr.model.TodoItem">TodoItem</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
     </li><li name="jh.App#showNoTitleError" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="showNoTitleError():Unit"></a>
       <span class="permalink">
@@ -546,10 +686,10 @@
       </span>
       
       <p class="shortcomment cmt">Show a popup dialog for when the title is empty</p>
-    </li><li name="jh.App#showSettings" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="showSettings():Unit"></a>
+    </li><li name="jh.App#showSettings" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="showSettings(forced:Boolean):Unit"></a><a id="showSettings(Boolean):Unit"></a>
       <span class="permalink">
-      <a href="../jh/App$.html#showSettings():Unit" title="Permalink">
+      <a href="../jh/App$.html#showSettings(forced:Boolean):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -558,14 +698,18 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">showSettings</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">showSettings</span><span class="params">(<span name="forced">forced: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Displays the SettingsView</p>
-    </li><li name="jh.App#showTimeline" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="showTimeline():Unit"></a>
+      <p class="shortcomment cmt">Displays the SettingsView
+</p><div class="fullcomment"><div class="comment cmt"><p>Displays the SettingsView
+</p></div><dl class="paramcmts block"><dt class="param">forced</dt><dd class="cmt"><p>If the view is already presented, calling the function does nothing.
+              This is a flag that determines if the view needs to be reloaded not matter what.
+              Default value is <code>false</code>.</p></dd></dl></div>
+    </li><li name="jh.App#showTimeline" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="showTimeline(forced:Boolean):Unit"></a><a id="showTimeline(Boolean):Unit"></a>
       <span class="permalink">
-      <a href="../jh/App$.html#showTimeline():Unit" title="Permalink">
+      <a href="../jh/App$.html#showTimeline(forced:Boolean):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -574,14 +718,18 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">showTimeline</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">showTimeline</span><span class="params">(<span name="forced">forced: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Displays the TimelineView</p>
-    </li><li name="jh.App#showToDoList" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="showToDoList():Unit"></a>
+      <p class="shortcomment cmt">Displays the TimelineView
+</p><div class="fullcomment"><div class="comment cmt"><p>Displays the TimelineView
+</p></div><dl class="paramcmts block"><dt class="param">forced</dt><dd class="cmt"><p>If the view is already presented, calling the function does nothing.
+              This is a flag that determines if the view needs to be reloaded not matter what.
+              Default value is <code>false</code>.</p></dd></dl></div>
+    </li><li name="jh.App#showToDoList" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="showToDoList(forced:Boolean):Unit"></a><a id="showToDoList(Boolean):Unit"></a>
       <span class="permalink">
-      <a href="../jh/App$.html#showToDoList():Unit" title="Permalink">
+      <a href="../jh/App$.html#showToDoList(forced:Boolean):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -590,10 +738,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">showToDoList</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">showToDoList</span><span class="params">(<span name="forced">forced: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Displays the TodoListView</p>
+      <p class="shortcomment cmt">Displays the TodoListView
+</p><div class="fullcomment"><div class="comment cmt"><p>Displays the TodoListView
+</p></div><dl class="paramcmts block"><dt class="param">forced</dt><dd class="cmt"><p>If the view is already presented, calling the function does nothing.
+              This is a flag that determines if the view needs to be reloaded not matter what.
+              Default value is <code>false</code>.</p></dd></dl></div>
     </li><li name="scalafx.application.JFXApp#stage" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="stage:scalafx.application.JFXApp.PrimaryStage"></a><a id="stage:PrimaryStage"></a>
       <span class="permalink">
