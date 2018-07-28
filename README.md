@@ -46,9 +46,9 @@ The weakness of our application is the presence of code redundancy. For example,
 
 ### Members Contribution
 
-* CHAN JING HONG (20%)
-* MARK ANTHONY MIDIN (17%)
-* TEOH ZHAN TAO (17%)
-* SHUM KA POH (17%)
-* DARIUS LAW HONG SHENG (17%)
-* WONG KENG SAM (12%)
+* xxxxxxxxxxxxxxx (20%)
+* xxxxxxxxxxxxxxx (17%)
+* xxxxxxxxxxxxxxx (17%)
+* xxxxxxxxxxxxxxx (17%)
+* xxxxxxxxxxxxxxx (17%)
+* xxxxxxxxxxxxxxx (12%)
